@@ -1,0 +1,22 @@
+{
+  "name": "vframe",
+  "version": "0.0.1",
+  "description": "A visual programming tool for building WebXR applications built on top of A-Frame using blockly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\""
+  },
+  "keywords": [
+    "webxr",
+    "aframe",
+    "blockly"
+  ],
+  "author": "M. S. Zubair",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "http-server": "^13.0.0"
+  }
+}

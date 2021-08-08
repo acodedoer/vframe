@@ -1,0 +1,55 @@
+html, body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #container {
+    margin: 0;
+    height:calc(100vh - 56px);;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 70%;
+    -ms-grid-rows: 50% 50%;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "blockly     frameSite"
+      "blockly     sourceCode";
+  }
+
+  #blocklyArea  {grid-area: blockly; -ms-grid-row:1;-ms-grid-column:1; -ms-grid-row-span:4;}
+  #frameSite {grid-area: frameSite; border: 5px solid #444;  -ms-grid-row:10;-ms-grid-column:0;margin: 1px}
+  #sourceCode {grid-area: sourceCode; border: 5px solid rgb(255, 0, 0);overflow: auto;  -ms-grid-row:10;-ms-grid-column:0; margin: 1px;}
+
+
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #dddddd;
+    margin-bottom: 1px;
+  }
+
+  #site-name{
+    font-size: 2em;
+    
+  }
+  i{
+    font-size: 2em;
+    padding-left: 2em;
+
+  }
+
+  .blocklyToolboxDiv .blocklyTreeRow{
+    height: 100%;
+  }
+  .blocklyToolboxContents{
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .blocklyToolboxCategory{
+    height: 11.111111111%;
+  }

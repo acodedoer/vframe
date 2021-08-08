@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js" integrity="sha512-RPSoY+8b4qjG6CEAMt6kvXPDPBylWT6OlRNwZR4sUPS2OOg386pYO00BcjF8pQq1saVLIoZ/j7bSm3/vvDOa5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/4ecba2d986.js" crossorigin="anonymous"></script>
+    <title>V-Frame</title>
+</head>
+<body>
+    <header>
+      <div id="site-name">V-Frame</div>
+      <input id="myfile" hidden type="file" accept=".txt,.xml">
+      <div id="site-icons"><i class="fas fa-folder-open" id="load" value="Choose Files!" onclick="document.getElementById('myfile').click();"></i><i class="fas fa-save" id="save"></i></div>
+    </header>
+    <div id="container">
+        <div id="blocklyArea"></div>
+        <div id="frameSite">
+          <a-scene embedded>
+            <a-entity id="scene">
+              
+            </a-entity>
+          </a-scene>
+        </div>
+        <pre id="sourceCode"></pre>
+      </div>
+      <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: inline">
+          <category name="Entity" colour="#323031">
+            <!--Entity-->
+            <block type="entity"></block>
+            <block type= "primitive_entity"></block>
+            <block type= "primitive_entity_childless"></block>
+            <!--<block type="entity_childless"></block> -->
+            <!--End Entity-->
+          </category>
+
+          <category name="Geometry" colour="#db3a34">
+            <block type= "box_primitive"></block>
+            <block type= "sphere_primitive"></block>
+            <block type= "plane_primitive"></block>
+            <block type= "cylinder_primitive"></block>
+            <block type= "cone_primitive"></block>
+            <block type= "torus_primitive"></block>
+            <block type= "dodecahedron_primitive"></block>
+            <block type= "icosahedron_primitive"></block>
+            <block type= "octahedron_primitive"></block>
+            <block type= "tetrahedron_primitive"></block>
+            <block type= "torus-knot_primitive"></block>
+          </category>
+
+          <category name="Media" colour="#ee9b00">
+            <block type="curvedimage_primitive"></block>
+            <block type="gltf-model_primitive"></block>
+            <block type='image_primitive'></block>
+            <block type='videosphere_primitive'></block>
+            <block type='video_primitive'></block>
+          </category>
+
+          <category name="Text" colour="#C4C408">
+            <block type="text_primitive"></block>
+            <block type="text_value"></block>
+            <block type="text_font"></block>
+          </category>
+
+          <category name="Dimenssions" colour="#705D56">
+            <block type= "entity_width"></block>
+            <block type= "entity_height"></block>
+            <block type= "entity_depth"></block>
+            <block type= "entity_radius"></block>
+          </category>
+
+          <category name="Animation" colour="#6200b3">
+            <block type="animation"></block>
+            <block type="animations"></block>
+            <block type="animation_property"></block>
+            <block type="animation_to"></block>
+            <block type="animation_from"></block>
+            <block type="animation_dur"></block>
+            <block type="animation_loop"></block>
+            <block type="animation_dir"></block>
+            <block type="animation_startEvents"></block>
+          </category>
+            
+          <!-- <category name="Inputs" colour="#93a55b">
+            <block type="vector"></block>
+            <block type="input_colour"></block>
+            <block type="input_number"></block>
+            <block type="input_text"></block>
+          </category> -->
+            
+          <category name="Material" colour="#4daa57">
+            <!--Material Component-->
+            <block type="material_color"></block>
+            <block type="material_src"></block>
+            <!--End Material Component-->
+          </category>
+
+          <category name="Transformations" colour="#3993dd">
+            <!--Position Component-->
+              <block type="entity_position">
+                  <field name="x"></field>
+                  <field name="y"></field>
+                  <field name="z"></field>
+                </block>
+
+            <!--End Position Component-->
+
+            <!--Rotation Component-->
+            <block type="entity_rotation">
+                    <field name="x"></field>
+                    <field name="y"></field>
+                    <field name="z"></field>
+            </block>
+            <!--End Rotation Component-->
+
+            <!--Scale Component-->
+            <block type="entity_scale">
+                    <field name="x"></field>
+                    <field name="y"></field>
+                    <field name="z"></field>
+            </block>
+            <!--End Scale Component-->
+          </category>
+
+          <category name="Light" colour="#ff6392">
+            <!--Light Components-->
+            <block type="light_primitive"></block>
+            <block type="light_type"></block>
+            <block type="light_angle"></block>
+            <block type="light_color"></block>
+            <!--End Light Components-->
+          </category>
+      </xml>
+
+      <script src="blockly_compressed.js"></script>
+      <script src="javascript_compressed.js"></script>
+      <script src="html_blocks.js"></script>
+      <script src="html_generators.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
