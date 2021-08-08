@@ -12,8 +12,8 @@ HtmlGenerator.scrub_ = function(block, code) {
 };
 
 HtmlGenerator['entity'] = function(block) {
-  const components = HtmlGenerator.statementToCode(block, 'component');
-  const children = HtmlGenerator.statementToCode(block, 'attribute');
+  const components = HtmlGenerator.statementToCode(block, 'attribute');
+  const children = HtmlGenerator.statementToCode(block, 'children');
   const code = `<a-entity ${components}> ${children} </a-entity>`;
   console.log(code)
   return code;
