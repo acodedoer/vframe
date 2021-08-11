@@ -827,6 +827,129 @@ const htmlBlocks =
   "helpUrl": ""
 },
   /* End Light*/
+
+  /* Begin Camera*/
+{//camera
+  "type": "camera_primitive",
+  "message0": "%1",
+  "args0": [
+  {
+    "type": "field_label",
+    "text": "camera",
+    "name": "primitive_entity",
+    "check": "geometry_primitive"
+  }],
+  "output": "entity_primitive",
+  "colour": "#000000",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{//camera far
+  "type": "camera_far",
+  "message0": "set camera far to %1",
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "camera_far",
+      "value": "10000"
+    }
+  ],
+  "colour": "#000000",
+  "previousStatement": "attribute",
+  "nextStatement": "attribute",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{//camera fov
+  "type": "camera_fov",
+  "message0": "set camera fov to %1",
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "camera_fov",
+      "value": "80"
+    }
+  ],
+  "colour": "#000000",
+  "previousStatement": "attribute",
+  "nextStatement": "attribute",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{//camera near
+  "type": "camera_near",
+  "message0": "set camera near to %1",
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "camera_near",
+      "value": "80"
+    }
+  ],
+  "colour": "#000000",
+  "previousStatement": "attribute",
+  "nextStatement": "attribute",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{ //camera look-controls-enabled 
+  "type": "camera_look-controls-enabled",
+  "message0": "%1 camera look controls",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "camera_look-controls-enabled",
+      "options": [
+        [ "enable", "true" ],
+        [ "disable", "false" ]
+      ]
+    }
+  ],
+  "colour": "#000000",
+  "previousStatement": "attribute",
+  "nextStatement": "attribute",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{ //camera reverse-mouse-drag 
+  "type": "camera_reverse-mouse-drag",
+  "message0": "%1 reverse mouse drag",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "camera_reverse-mouse-drag",
+      "options": [
+        [ "disable", "false" ],
+        [ "enable", "true" ]
+      ]
+    }
+  ],
+  "colour": "#000000",
+  "previousStatement": "attribute",
+  "nextStatement": "attribute",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{ //camera wasd-controls-enabled 
+  "type": "camera_wasd-controls-enabled",
+  "message0": "%1 camera wasd controls",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "camera_wasd-controls-enabled",
+      "options": [
+        [ "enable", "true" ],
+        [ "disable", "false" ]
+      ]
+    }
+  ],
+  "colour": "#000000",
+  "previousStatement": "attribute",
+  "nextStatement": "attribute",
+  "tooltip": "",
+  "helpUrl": ""
+},
+  /* End Light*/
 ]
 
 

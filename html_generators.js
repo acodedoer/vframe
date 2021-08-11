@@ -40,7 +40,7 @@ HtmlGenerator['primitive_entity_childless'] = function(block) {
   return code;
 };
 
-const primitive_geometries = ['light_primitive','box_primitive', 'cone_primitive', 'cylinder_primitive', 'dodecahedron_primitive', 'icosahedron_primitive', 'octahedron_primitive', 'plane_primitive', 'sphere_primitive', 'tetrahedron_primitive', 'torus-knot_primitive', 'torus_primitive', 'curvedimage_primitive', 'gltf-model_primitive', 'image_primitive', 'videosphere_primitive', 'video_primitive', 'text_primitive']
+const primitive_geometries = ['light_primitive','box_primitive', 'cone_primitive', 'cylinder_primitive', 'dodecahedron_primitive', 'icosahedron_primitive', 'octahedron_primitive', 'plane_primitive', 'sphere_primitive', 'tetrahedron_primitive', 'torus-knot_primitive', 'torus_primitive', 'curvedimage_primitive', 'gltf-model_primitive', 'image_primitive', 'videosphere_primitive', 'video_primitive', 'text_primitive', 'camera_primitive']
 for(let i = 0; i<primitive_geometries.length; i++){
   HtmlGenerator[primitive_geometries[i]] = function(block) {
     const src= [block.getFieldValue('src'), Blockly.JavaScript.ORDER_ATOMIC][0];
@@ -49,7 +49,7 @@ for(let i = 0; i<primitive_geometries.length; i++){
   }
 }
 
-const primitive_attributes = ['entity_depth', 'entity_width', 'entity_height', 'entity_radius', 'material_color', 'material_src', 'text_value', 'text_font', 'light_angle', 'light_color', 'light_type']
+const primitive_attributes = ['entity_depth', 'entity_width', 'entity_height', 'entity_radius', 'material_color', 'material_src', 'text_value', 'text_font', 'light_angle', 'light_color', 'light_type', "camera_wasd-controls-enabled", "camera_reverse-mouse-drag", "camera_look-controls-enabled", "camera_near", "camera_fov", "camera_far"]
 for(let i = 0; i<primitive_attributes.length; i++){
   HtmlGenerator[primitive_attributes[i]] = function(block) {
     const value = [block.getFieldValue(primitive_attributes[i]), Blockly.JavaScript.ORDER_ATOMIC][0];
