@@ -1,5 +1,5 @@
 let workspace = Blockly.inject('blocklyArea', {
-  toolbox: document.getElementById('toolbox'),
+  toolbox: document.getElementById('primitiveToolbox'),
   scrollbars: false, collapse: true, zoom:
   {controls: true,
     wheel: true,
@@ -11,6 +11,9 @@ let workspace = Blockly.inject('blocklyArea', {
 });
 workspace.toolbox_.flyout_.autoClose = false;
 
+function setCategories(e, toolbox){
+  workspace.updateToolbox(document.getElementById(toolbox));
+ }
 function myUpdateFunction(event) {
   var workspace_code = HtmlGenerator.workspaceToCode(workspace);
   const scene = document.getElementById('scene')

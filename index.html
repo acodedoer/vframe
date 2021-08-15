@@ -16,6 +16,11 @@
       <input id="myfile" hidden type="file" accept=".txt,.xml">
       <div id="site-icons"><i class="fas fa-folder-open" id="load" value="Choose Files!" onclick="document.getElementById('myfile').click();"></i><i class="fas fa-save" id="save"></i></div>
     </header>
+    <nav class="tab">
+      <button class="tablinks" onclick="setCategories(event, 'componentToolbox')">Components</button>
+      <button class="tablinks" onclick="setCategories(event, 'primitiveToolbox')">Primitives</button>
+      <button class="tablinks" onclick="setCategories(event, 'javascriptToolbox')">JS</button>
+    </nav>
     <div id="container">
         <div id="blocklyArea"></div>
         <div id="frameSite">
@@ -30,49 +35,12 @@
         </div>
         <pre id="sourceCode"></pre>
       </div>
-      <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: inline">
+      <xml xmlns="https://developers.google.com/blockly/xml" id="componentToolbox" style="display: inline">
           <category name="Entity" colour="#323031">
             <!--Entity-->
-            <block type="entity"></block>
-            <block type= "primitive_entity"></block>
-            <block type= "primitive_entity_childless"></block>
-            <!--<block type="entity_childless"></block> -->
+            <block type= "entity"></block>
+            <block type= "entity_childless"></block>
             <!--End Entity-->
-          </category>
-
-          <category name="Geometry" colour="#db3a34">
-            <block type= "box_primitive"></block>
-            <block type= "sphere_primitive"></block>
-            <block type= "plane_primitive"></block>
-            <block type= "cylinder_primitive"></block>
-            <block type= "cone_primitive"></block>
-            <block type= "torus_primitive"></block>
-            <block type= "dodecahedron_primitive"></block>
-            <block type= "icosahedron_primitive"></block>
-            <block type= "octahedron_primitive"></block>
-            <block type= "tetrahedron_primitive"></block>
-            <block type= "torus-knot_primitive"></block>
-          </category>
-
-          <category name="Media" colour="#ee9b00">
-            <block type="curvedimage_primitive"></block>
-            <block type="gltf-model_primitive"></block>
-            <block type='image_primitive'></block>
-            <block type='videosphere_primitive'></block>
-            <block type='video_primitive'></block>
-          </category>
-
-          <category name="Text" colour="#C4C408">
-            <block type="text_primitive"></block>
-            <block type="text_value"></block>
-            <block type="text_font"></block>
-          </category>
-
-          <category name="Dimenssions" colour="#705D56">
-            <block type= "entity_width"></block>
-            <block type= "entity_height"></block>
-            <block type= "entity_depth"></block>
-            <block type= "entity_radius"></block>
           </category>
 
           <category name="Animation" colour="#6200b3">
@@ -86,6 +54,14 @@
             <block type="animation_dir"></block>
             <block type="animation_startEvents"></block>
           </category>
+          <category name="Camera">
+
+          </category>
+          <category name="Interactions">
+
+          </category>
+
+
             
           <!-- <category name="Inputs" colour="#93a55b">
             <block type="vector"></block>
@@ -128,17 +104,15 @@
             <!--End Scale Component-->
           </category>
 
-          <category name="Light" colour="#ff6392">
-            <!--Light Components-->
-            <block type="light_primitive"></block>
-            <block type="light_type"></block>
-            <block type="light_angle"></block>
-            <block type="light_color"></block>
-            <!--End Light Components-->
-          </category>
+      </xml>
 
-          <category name="Camera" colour="#000000">
-            <!--Camera Components-->
+      <xml xmlns="https://developers.google.com/blockly/xml" id="primitiveToolbox" style="display: inline">
+        <category name="Entity" colour="#323031">
+          <!--Entity-->
+          <block type= "primitive_entity"></block>
+          <block type= "primitive_entity_childless"></block>
+        </category>
+          <category name="Camera" colour="#db3a34">
             <block type="camera_primitive"></block>
             <block type="camera_far"></block>
             <block type="camera_fov"></block>
@@ -146,14 +120,67 @@
             <block type="camera_near"></block>
             <block type="camera_reverse-mouse-drag"></block>
             <block type="camera_wasd-controls-enabled"></block>
-            <!--End Camera Components-->
           </category>
-      </xml>
+          <category name="Cursor" colour="#db3a34">
+            <block type="cursor_primitive"></block>
+            <block type="cursor_far"></block>
+            <block type="cursor_fuse"></block>
+            <block type="cursor_fuse-timeout"></block>
+            <block type="cursor_interval"></block>
+            <block type="cursor_objects"></block>
+          </category>
+          <category name="Geometry Based" colour="#db3a34">
+            <block type= "box_primitive">
+            </block>
+            <block type= "sphere_primitive"></block>
+            <block type= "plane_primitive"></block>
+            <block type= "cylinder_primitive"></block>
+            <block type= "cone_primitive"></block>
+            <block type= "torus_primitive"></block>
+            <block type= "dodecahedron_primitive"></block>
+            <block type= "icosahedron_primitive"></block>
+            <block type= "octahedron_primitive"></block>
+            <block type= "tetrahedron_primitive"></block>
+            <block type= "torus-knot_primitive"></block>
+            <block type="curvedimage_primitive"></block>
+            <block type="gltf-model_primitive"></block>
+            <block type='image_primitive'></block>
+            <block type='videosphere_primitive'></block>
+            <block type='video_primitive'></block>
+            <block type='sky_primitive'></block>
+            <block type= "geometry_width"></block>
+            <block type= "geometry_height"></block>
+            <block type= "geometry_depth"></block>
+            <block type= "geometry_radius"></block>    
+            <block type= "geometry_color"></block>         
+          </category>
+          <category name="Light" colour="#db3a34">
+            <block type="light_primitive"></block>
+            <block type="light_type"></block>
+            <block type="light_angle"></block>
+            <block type="light_color"></block>
+          </category>
+          <category name="Model" colour="#db3a34">
+            <block type="gltf-model_primitive"></block>
+          </category>
+          <category name="Sound" colour="#db3a34">
+            <block type="sound_primitive"></block>
+            <block type="sound_autoplay"></block>
+            <block type="sound_loop"></block>
+            <block type="sound_on"></block>
+            <block type="sound_volume"></block>
+          </category>
+          <category name="Text" colour="#db3a34">
+            <block type="text_primitive"></block>
+            <block type="text_value"></block>
+        </category>
 
+    </xml>
       <script src="blockly_compressed.js"></script>
       <script src="javascript_compressed.js"></script>
-      <script src="html_blocks.js"></script>
-      <script src="html_generators.js"></script>
+      <script src="primitives_blocks.js"></script>
+      <script src="components_blocks.js"></script>
+      <script src="code_generators.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

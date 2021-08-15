@@ -41,15 +41,3 @@ html, body {
 
   }
 
-  .blocklyToolboxDiv .blocklyTreeRow{
-    height: 100%;
-  }
-  .blocklyToolboxContents{
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .blocklyToolboxCategory{
-    height: 11.111111111%;
-  }
