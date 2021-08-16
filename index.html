@@ -11,174 +11,188 @@
     <title>V-Frame</title>
 </head>
 <body>
-    <header>
-      <div id="site-name">V-Frame</div>
-      <input id="myfile" hidden type="file" accept=".txt,.xml">
-      <div id="site-icons"><i class="fas fa-folder-open" id="load" value="Choose Files!" onclick="document.getElementById('myfile').click();"></i><i class="fas fa-save" id="save"></i></div>
-    </header>
-    <nav class="tab">
-      <button class="tablinks" onclick="setCategories(event, 'componentToolbox')">Components</button>
-      <button class="tablinks" onclick="setCategories(event, 'primitiveToolbox')">Primitives</button>
-      <button class="tablinks" onclick="setCategories(event, 'javascriptToolbox')">JS</button>
-    </nav>
-    <div id="container">
-        <div id="blocklyArea"></div>
-        <div id="frameSite">
-          <a-scene embedded>
-            <a-entity id="rig" position="0 1.6 4">
-              <a-entity id="camera" camera look-controls wasd-controls></a-entity>
-            </a-entity>
-            <a-entity id="scene">
-              
-            </a-entity>
-          </a-scene>
-        </div>
-        <pre id="sourceCode"></pre>
+  <header>
+    <div id="site-name">V-Frame</div>
+    <input id="myfile" hidden type="file" accept=".txt,.xml">
+    <div id="site-icons"><i class="fas fa-folder-open" id="load" value="Choose Files!" onclick="document.getElementById('myfile').click();"></i><i class="fas fa-save" id="save"></i></div>
+  </header>
+  <nav class="tab">
+    <button class="tablinks active" onclick="setCategories(event, 'componentToolbox')">Components</button>
+    <button class="tablinks" onclick="setCategories(event, 'primitiveToolbox')">Primitives</button>
+    <!--<button class="tablinks" onclick="setCategories(event, 'javascriptToolbox')">JS</button> -->
+  </nav>
+  <div id="container">
+    <div id="blocklyArea"></div>
+      <div id="frameSite">
+        <a-scene embedded>
+          <a-entity id="rig" position="0 1.6 4">
+            <a-entity id="camera" camera look-controls wasd-controls></a-entity>
+          </a-entity>
+          <a-entity id="scene"> 
+          </a-entity>
+        </a-scene>
       </div>
-      <xml xmlns="https://developers.google.com/blockly/xml" id="componentToolbox" style="display: inline">
-          <category name="Entity" colour="#323031">
-            <!--Entity-->
-            <block type= "entity"></block>
-            <block type= "entity_childless"></block>
-            <!--End Entity-->
-          </category>
+      <pre id="sourceCode"></pre>
+    </div>
+    <xml xmlns="https://developers.google.com/blockly/xml" id="componentToolbox" style="display: inline">
+        <category name="Entity" colour="#C90000">
+          <!--Entity-->
+          <block type= "entity"></block>
+          <block type= "entity_childless"></block>
+          <!--End Entity-->
+        </category>
 
-          <category name="Animation" colour="#6200b3">
-            <block type="animation"></block>
-            <block type="animations"></block>
-            <block type="animation_property"></block>
-            <block type="animation_to"></block>
-            <block type="animation_from"></block>
-            <block type="animation_dur"></block>
-            <block type="animation_loop"></block>
-            <block type="animation_dir"></block>
-            <block type="animation_startEvents"></block>
-          </category>
-          <category name="Camera">
+        <category name="Animation" colour="#087149">
+          <block type="animation"></block>
+          <block type="animations"></block>
+          <block type="animation-component_property"></block>
+          <block type="animation-component_to"></block>
+          <block type="animation-component_from"></block>
+          <block type="animation-component_dur"></block>
+          <block type="animation-component_loop"></block>
+          <block type="animation-component_dir"></block>
+          <block type="animation-component_startEvents"></block>
+        </category>
+        <category name="Camera" colour="#0F3E6C">
+          <block type="camera"></block>
+          <block type="camera-component_active"></block>
+          <block type="camera-component_far"></block>
+          <block type="camera-component_fov"></block>
+          <block type="camera-component_near"></block>
+          <block type="camera-component_spectator"></block>
+          <block type="camera-component_zoom"></block>
+        </category>
+        <category name="Fog" colour="#A7670C">
+          <block type="fog"></block>
+          <block type="fog-component_type"></block>
+          <block type="fog-component_color"></block>
+          <block type="fog-component_density"></block>
+          <block type="fog-component_far"></block>
+          <block type="fog-component_near"></block>
+        </category>
 
-          </category>
-          <category name="Interactions">
 
-          </category>
+          
+        <!-- <category name="Inputs" colour="#93a55b">
+          <block type="vector"></block>
+          <block type="input_colour"></block>
+          <block type="input_number"></block>
+          <block type="input_text"></block>
+        </category> -->
+          
+        <category name="Material" colour="#172073">
+          <!--Material Component-->
+          <block type="material"></block>
+          <block type="material-component_color"></block>
+          <block type="material-component_src"></block>
+          <block type="material-component_properties"></block>
+          <!--End Material Component-->
+        </category>
 
+        <category name="Transformations" colour="#A73C0C">
+          <!--Position Component-->
+            <block type="entity_position">
+                <field name="x"></field>
+                <field name="y"></field>
+                <field name="z"></field>
+              </block>
 
-            
-          <!-- <category name="Inputs" colour="#93a55b">
-            <block type="vector"></block>
-            <block type="input_colour"></block>
-            <block type="input_number"></block>
-            <block type="input_text"></block>
-          </category> -->
-            
-          <category name="Material" colour="#4daa57">
-            <!--Material Component-->
-            <block type="material_color"></block>
-            <block type="material_src"></block>
-            <!--End Material Component-->
-          </category>
+          <!--End Position Component-->
 
-          <category name="Transformations" colour="#3993dd">
-            <!--Position Component-->
-              <block type="entity_position">
+          <!--Rotation Component-->
+          <block type="entity_rotation">
                   <field name="x"></field>
                   <field name="y"></field>
                   <field name="z"></field>
-                </block>
+          </block>
+          <!--End Rotation Component-->
 
-            <!--End Position Component-->
-
-            <!--Rotation Component-->
-            <block type="entity_rotation">
-                    <field name="x"></field>
-                    <field name="y"></field>
-                    <field name="z"></field>
-            </block>
-            <!--End Rotation Component-->
-
-            <!--Scale Component-->
-            <block type="entity_scale">
-                    <field name="x"></field>
-                    <field name="y"></field>
-                    <field name="z"></field>
-            </block>
-            <!--End Scale Component-->
-          </category>
-
-      </xml>
-
-      <xml xmlns="https://developers.google.com/blockly/xml" id="primitiveToolbox" style="display: inline">
-        <category name="Entity" colour="#323031">
-          <!--Entity-->
-          <block type= "primitive_entity"></block>
-          <block type= "primitive_entity_childless"></block>
-        </category>
-          <category name="Camera" colour="#db3a34">
-            <block type="camera_primitive"></block>
-            <block type="camera_far"></block>
-            <block type="camera_fov"></block>
-            <block type="camera_look-controls-enabled"></block>
-            <block type="camera_near"></block>
-            <block type="camera_reverse-mouse-drag"></block>
-            <block type="camera_wasd-controls-enabled"></block>
-          </category>
-          <category name="Cursor" colour="#db3a34">
-            <block type="cursor_primitive"></block>
-            <block type="cursor_far"></block>
-            <block type="cursor_fuse"></block>
-            <block type="cursor_fuse-timeout"></block>
-            <block type="cursor_interval"></block>
-            <block type="cursor_objects"></block>
-          </category>
-          <category name="Geometry Based" colour="#db3a34">
-            <block type= "box_primitive">
-            </block>
-            <block type= "sphere_primitive"></block>
-            <block type= "plane_primitive"></block>
-            <block type= "cylinder_primitive"></block>
-            <block type= "cone_primitive"></block>
-            <block type= "torus_primitive"></block>
-            <block type= "dodecahedron_primitive"></block>
-            <block type= "icosahedron_primitive"></block>
-            <block type= "octahedron_primitive"></block>
-            <block type= "tetrahedron_primitive"></block>
-            <block type= "torus-knot_primitive"></block>
-            <block type="curvedimage_primitive"></block>
-            <block type="gltf-model_primitive"></block>
-            <block type='image_primitive'></block>
-            <block type='videosphere_primitive'></block>
-            <block type='video_primitive'></block>
-            <block type='sky_primitive'></block>
-            <block type= "geometry_width"></block>
-            <block type= "geometry_height"></block>
-            <block type= "geometry_depth"></block>
-            <block type= "geometry_radius"></block>    
-            <block type= "geometry_color"></block>         
-          </category>
-          <category name="Light" colour="#db3a34">
-            <block type="light_primitive"></block>
-            <block type="light_type"></block>
-            <block type="light_angle"></block>
-            <block type="light_color"></block>
-          </category>
-          <category name="Model" colour="#db3a34">
-            <block type="gltf-model_primitive"></block>
-          </category>
-          <category name="Sound" colour="#db3a34">
-            <block type="sound_primitive"></block>
-            <block type="sound_autoplay"></block>
-            <block type="sound_loop"></block>
-            <block type="sound_on"></block>
-            <block type="sound_volume"></block>
-          </category>
-          <category name="Text" colour="#db3a34">
-            <block type="text_primitive"></block>
-            <block type="text_value"></block>
+          <!--Scale Component-->
+          <block type="entity_scale">
+                  <field name="x"></field>
+                  <field name="y"></field>
+                  <field name="z"></field>
+          </block>
+          <!--End Scale Component-->
         </category>
 
     </xml>
+
+    <xml xmlns="https://developers.google.com/blockly/xml" id="primitiveToolbox" style="display: inline">
+      <category name="Entity" colour="#C90000">
+        <!--Entity-->
+        <block type= "primitive_entity"></block>
+        <block type= "primitive_entity_childless"></block>
+      </category>
+      <category name="Camera" colour="#00A100">
+        <block type="camera_primitive"></block>
+        <block type="camera_far"></block>
+        <block type="camera_fov"></block>
+        <block type="camera_look-controls-enabled"></block>
+        <block type="camera_near"></block>
+        <block type="camera_reverse-mouse-drag"></block>
+        <block type="camera_wasd-controls-enabled"></block>
+      </category>
+      <category name="Cursor" colour="#C97A00">
+        <block type="cursor_primitive"></block>
+        <block type="cursor_far"></block>
+        <block type="cursor_fuse"></block>
+        <block type="cursor_fuse-timeout"></block>
+        <block type="cursor_interval"></block>
+        <block type="cursor_objects"></block>
+      </category>
+      <category name="Geometry Based" colour="#00567F">
+        <block type= "box_primitive">
+        </block>
+        <block type= "sphere_primitive"></block>
+        <block type= "plane_primitive"></block>
+        <block type= "cylinder_primitive"></block>
+        <block type= "cone_primitive"></block>
+        <block type= "torus_primitive"></block>
+        <block type= "dodecahedron_primitive"></block>
+        <block type= "icosahedron_primitive"></block>
+        <block type= "octahedron_primitive"></block>
+        <block type= "tetrahedron_primitive"></block>
+        <block type= "torus-knot_primitive"></block>
+        <block type="curvedimage_primitive"></block>
+        <block type='image_primitive'></block>
+        <block type='videosphere_primitive'></block>
+        <block type='video_primitive'></block>
+        <block type='sky_primitive'></block>
+        <block type= "geometry_width"></block>
+        <block type= "geometry_height"></block>
+        <block type= "geometry_depth"></block>
+        <block type= "geometry_radius"></block>    
+        <block type= "geometry_color"></block> 
+        <block type= "geometry_attributes"></block>       
+      </category>
+      <category name="Light" colour="#ADC400">
+        <block type="light_primitive"></block>
+        <block type="light_type"></block>
+        <block type="light_angle"></block>
+        <block type="light_color"></block>
+      </category>
+      <category name="Model" colour="#430088">
+        <block type="gltf-model_primitive"></block>
+      </category>
+      <category name="Sound" colour="#A1005B">
+        <block type="sound_primitive"></block>
+        <block type="sound_autoplay"></block>
+        <block type="sound_loop"></block>
+        <block type="sound_on"></block>
+        <block type="sound_volume"></block>
+      </category>
+      <category name="Text" colour="#00DB9E">
+        <block type="text_primitive"></block>
+        <block type="text_value"></block>
+        <block type="text_attributes"></block>
+      </category>
+    </xml>
+
       <script src="blockly_compressed.js"></script>
       <script src="javascript_compressed.js"></script>
       <script src="primitives_blocks.js"></script>
+      <script src="entities_blocks.js"></script>
       <script src="components_blocks.js"></script>
       <script src="code_generators.js"></script>
     <script src="index.js"></script>
