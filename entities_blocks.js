@@ -93,6 +93,22 @@ const entitiesBlocks =
     "tooltip": "",
     "helpUrl": ""
   },
+  {//entity id
+    "type": "entity_id",
+    "message0": "set entity id to %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "entity_id",
+        "value": 18
+      }
+    ],
+    "colour": "#C90000",
+    "previousStatement": "component",
+    "nextStatement": "component",
+    "tooltip": "",
+    "helpUrl": ""
+  },
 /* End Entities*/
 ]
 for (let iBlock in entitiesBlocks) {

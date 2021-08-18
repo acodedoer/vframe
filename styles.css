@@ -5,7 +5,7 @@ html, body {
 
   #container {
     margin: 0;
-    height:calc(100vh - 103px);;
+    height:calc(100vh - 46px);;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 30% 70%;
@@ -29,6 +29,7 @@ html, body {
     padding: 10px;
     background-color: #dddddd;
     margin-bottom: 1px;
+    display: none;
   }
 
   #site-name{

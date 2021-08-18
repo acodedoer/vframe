@@ -27,6 +27,7 @@ function setCategories(e, toolbox){
  }
 
 function myUpdateFunction(event) {
+  console.log(workspace)
   var workspace_code = HtmlGenerator.workspaceToCode(workspace);
   const scene = document.getElementById('scene')
   scene.innerHTML = workspace_code
