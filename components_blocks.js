@@ -1,44 +1,44 @@
 const componentsBlocks =
 [
   /*Begin Interaction Components */
-    {//event-set
-      "type": "event-set",
-      "message0": "add event-set %1",
-      "args0": [
+  {//event-set
+    "type": "event-set",
+    "message0": "add event-set %1",
+    "args0": [
+    {
+      "type": "input_statement",
+      "name": "event-set_properties",
+    },
+    ],
+    "previousStatement": "component",
+    "nextStatement": "component",
+    "colour": "#0F0000",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  { //choose event 
+    "type": "event-set__event",
+    "message0": "set event to %1",
+    "args0": [
       {
-        "type": "input_statement",
-        "name": "event-set_properties",
-      },
-      ],
-      "previousStatement": "component",
-      "nextStatement": "component",
-      "colour": "#0F0000",
-      "tooltip": "",
-      "helpUrl": ""
-    },
-    { //choose event 
-      "type": "event-set__event",
-      "message0": "set event to %1",
-      "args0": [
-        {
-          "type": "field_dropdown",
-          "name": "event-set__event",
-          "options": [
-            [ "mouseenter", "mouseenter" ],
-            [ "mouseleave", "mouseleave" ],
-            ['click', 'click']
-          ]
-        }
-      ],
-      "previousStatement": null,
-      "nextStatement": null,
-      "colour": "#0F0000",
-      "tooltip": "",
-      "helpUrl": ""
-    },
+        "type": "field_dropdown",
+        "name": "event-set__event",
+        "options": [
+          [ "mouseenter", "mouseenter" ],
+          [ "mouseleave", "mouseleave" ],
+          ['click', 'click']
+        ]
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": "#0F0000",
+    "tooltip": "",
+    "helpUrl": ""
+  },
   /*End Interaction Components */
 
-    /* Begin Animation Component*/
+  /* Begin Animation Component*/
   {//animation
     "type": "animation",
     "message0": "add animation %1",
@@ -51,6 +51,22 @@ const componentsBlocks =
     ],
     "previousStatement": "component",
     "nextStatement": "component",
+    "colour": "#087149",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  { //id 
+    "type": "animation-component_id",
+    "message0": "set animation id to %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "animation-component_id",
+        "check": "animation_id"
+      }
+    ],
+    "previousStatement": "animation_property",
+    "nextStatement": "animation_property",
     "colour": "#087149",
     "tooltip": "",
     "helpUrl": ""
@@ -520,6 +536,80 @@ const componentsBlocks =
     "helpUrl": ""
   },
   /*End Fog Component */
+
+  /* Begin Sound Component*/
+  {//sound
+    "type": "sound",
+    "message0": "add sound %1",
+    "args0": [
+    {
+      "type": "input_statement",
+      "name": "sound_properties",
+      "check": "sound_property"
+    },
+    ],
+    "previousStatement": "component",
+    "nextStatement": "component",
+    "colour": "#E900AA",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  { //sound autoplay 
+    "type": "sound-component_autoplay",
+    "message0": "set autoplay to %1",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "sound-component_autoplay",
+        "options": [
+          [ "true", "true" ],
+          [ "fasle", "fasle" ],
+        ]
+      }
+    ],
+    "colour": "#E900AA",
+    "previousStatement": "sound_property",
+    "nextStatement": "sound_property",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  { //sound src 
+    "type": "sound-component_src",
+    "message0": "set src to %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "sound-component_src",
+      }
+    ],
+    "colour": "#E900AA",
+    "previousStatement": "sound_property",
+    "nextStatement": "sound_property",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  { //sound properties
+    "type": "sound-component_properties",
+    "message0": "set sound %1 to %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "property",
+        "text": "property"
+      },
+      {
+        "type": "field_input",
+        "name": "value",
+        "text": "value"
+      }
+    ],
+    "previousStatement": "sound_property",
+    "nextStatement": "sound_property",
+    "colour": "#E900AA",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  /* End Sound Component*/
 
   /*Begin Transformation */
   {//scale
