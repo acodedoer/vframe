@@ -1,5 +1,43 @@
 const componentsBlocks =
 [
+  /*Begin Interaction Components */
+    {//event-set
+      "type": "event-set",
+      "message0": "add event-set %1",
+      "args0": [
+      {
+        "type": "input_statement",
+        "name": "event-set_properties",
+      },
+      ],
+      "previousStatement": "component",
+      "nextStatement": "component",
+      "colour": "#0F0000",
+      "tooltip": "",
+      "helpUrl": ""
+    },
+    { //choose event 
+      "type": "event-set__event",
+      "message0": "set event to %1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "event-set__event",
+          "options": [
+            [ "mouseenter", "mouseenter" ],
+            [ "mouseleave", "mouseleave" ],
+            ['click', 'click']
+          ]
+        }
+      ],
+      "previousStatement": null,
+      "nextStatement": null,
+      "colour": "#0F0000",
+      "tooltip": "",
+      "helpUrl": ""
+    },
+  /*End Interaction Components */
+
     /* Begin Animation Component*/
   {//animation
     "type": "animation",
@@ -13,27 +51,6 @@ const componentsBlocks =
     ],
     "previousStatement": "component",
     "nextStatement": "component",
-    "colour": "#087149",
-    "tooltip": "",
-    "helpUrl": ""
-  },
-  {//animations
-    "type": "animations",
-    "message0": "animation 1 %1 animation 2 %2 ",
-    "args0": [
-    {
-      "type": "input_statement",
-      "name": "animation_properties_1",
-      "check": "animation_property"
-    },
-    {
-      "type": "input_statement",
-      "name": "animation_properties_2",
-      "check": "animation_property"
-    },
-    ],
-    "previousStatement": "attribute",
-    "nextStatement": "attribute",
     "colour": "#087149",
     "tooltip": "",
     "helpUrl": ""
@@ -75,7 +92,7 @@ const componentsBlocks =
     "colour": "#087149",
     "tooltip": "",
     "helpUrl": ""
-    },
+  },
   { //from 
     "type": "animation-component_from",
     "message0": "animate from %1",
@@ -110,12 +127,56 @@ const componentsBlocks =
   },
   { //startEvents 
     "type": "animation-component_startEvents",
-    "message0": "set animation start  to %1",
+    "message0": "start animation on %1",
     "args0": [
       {
-        "type": "field_input",
+        "type": "field_dropdown",
         "name": "animation-component_startEvents",
-        "check": "animation_startEvents"
+        "options": [
+          [ "mouseenter", "mouseenter" ],
+          [ "mouseleave", "mouseleave" ],
+          ['click', 'click']
+        ]
+      }
+    ],
+    "previousStatement": "animation_property",
+    "nextStatement": "animation_property",
+    "colour": "#087149",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  { //pauseEvents 
+    "type": "animation-component_pauseEvents",
+    "message0": "pause animation on %1",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "animation-component_pauseEvents",
+        "options": [
+          [ "mouseenter", "mouseenter" ],
+          [ "mouseleave", "mouseleave" ],
+          ['click', 'click']
+        ]
+      }
+    ],
+    "previousStatement": "animation_property",
+    "nextStatement": "animation_property",
+    "colour": "#087149",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  { //resumeEvents 
+    "type": "animation-component_resumeEvents",
+    "message0": "resume animation on %1",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "animation-component_resumeEvents",
+        "options": [
+          [ "mouseenter", "mouseenter" ],
+          [ "mouseleave", "mouseleave" ],
+          ['click', 'click']
+        ]
       }
     ],
     "previousStatement": "animation_property",

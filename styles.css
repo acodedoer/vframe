@@ -5,7 +5,7 @@ html, body {
 
   #container {
     margin: 0;
-    height:calc(100vh - 46px);;
+    height:calc(100vh - 48px);;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 30% 70%;
@@ -41,7 +41,7 @@ html, body {
     padding-left: 2em;
 
   }
-
+/* Begin code from https://www.w3schools.com/howto/howto_js_tabs.asp */
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -58,6 +58,8 @@ html, body {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 /* Change background color of buttons on hover */
@@ -77,3 +79,4 @@ html, body {
   border: 1px solid #ccc;
   border-top: none;
 }
+/* End code from https://www.w3schools.com/howto/howto_js_tabs.asp */

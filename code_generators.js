@@ -73,25 +73,22 @@ for(let i = 0; i<free_attributes.length; i++){
   };
 }
 
-const components = ['animation', 'camera', 'fog', 'material']
+const components = ['animation', 'camera', 'fog', 'material', 'event-set']
 for(let i = 0; i<components.length; i++){
   HtmlGenerator[components[i]] = function(block) {
     const attributes = HtmlGenerator.statementToCode(block, `${components[i]}_properties`,Blockly.JavaScript.ORDER_ATOMIC);
-    const code = `${components[i]}="${attributes}"`;
-    console.log(code)
+    let code;
+    if(components[i]!=="animation"){
+      code = `${components[i]}="${attributes}" `;
+    }
+    else{
+      code = `${components[i]}_${nextCount()}="${attributes}" `;
+    }
     return code;
   }
 }
 
-
-HtmlGenerator['animations'] = function(block) {
-  const attributes1 = HtmlGenerator.statementToCode(block, 'animation_properties_1',Blockly.JavaScript.ORDER_ATOMIC);
-  const attributes2 = HtmlGenerator.statementToCode(block, 'animation_properties_2',Blockly.JavaScript.ORDER_ATOMIC);
-  const code = `animation="${attributes1}" animation__1="${attributes2}"`;
-  return code;
-};
-
-const component_properties = ['animation-component_property', 'animation-component_to', 'animation-component_from', 'animation-component_startEvents','animation-component_dur', 'animation-component_loop', 'animation-component_dir', 'camera-component_active', 'camera-component_far','camera-component_fov','camera-component_near','camera-component_spectator','camera-component_zoom', 'fog-component_type', 'fog-component_color', 'fog-component_near', 'fog-component_far', 'fog-component_density', 'material-component_color', 'material-component_src', ]
+const component_properties = ['animation-component_property', 'animation-component_to', 'animation-component_from', 'animation-component_startEvents', 'animation-component_pauseEvents', 'animation-component_resumeEvents','animation-component_dur', 'animation-component_loop', 'animation-component_dir', 'camera-component_active', 'camera-component_far','camera-component_fov','camera-component_near','camera-component_spectator','camera-component_zoom', 'fog-component_type', 'fog-component_color', 'fog-component_near', 'fog-component_far', 'fog-component_density', 'material-component_color', 'material-component_src', 'event-set__event']
 for(let i = 0; i<component_properties.length; i++){
   HtmlGenerator[component_properties[i]] = function(block) {
     const value = [block.getFieldValue(component_properties[i]), Blockly.JavaScript.ORDER_ATOMIC][0];
@@ -109,4 +106,9 @@ for(let i = 0; i<components_with_vector.length; i++){
     const copmonent = components_with_vector[i].slice(components_with_vector[i].indexOf("_") +1);
     return ` ${copmonent}="${x} ${y} ${z}"`
   }
+}
+
+let count = 0;
+function nextCount(){
+  return ++count;
 }

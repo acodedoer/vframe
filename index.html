@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js" integrity="sha512-RPSoY+8b4qjG6CEAMt6kvXPDPBylWT6OlRNwZR4sUPS2OOg386pYO00BcjF8pQq1saVLIoZ/j7bSm3/vvDOa5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/4ecba2d986.js" crossorigin="anonymous"></script>
     <title>V-Frame</title>
@@ -42,10 +43,8 @@
           <block type="entity_id"></block>
           <!--End Entity-->
         </category>
-
         <category name="Animation" colour="#087149">
           <block type="animation"></block>
-          <block type="animations"></block>
           <block type="animation-component_property"></block>
           <block type="animation-component_to"></block>
           <block type="animation-component_from"></block>
@@ -53,6 +52,8 @@
           <block type="animation-component_loop"></block>
           <block type="animation-component_dir"></block>
           <block type="animation-component_startEvents"></block>
+          <block type="animation-component_pauseEvents"></block>
+          <block type="animation-component_resumeEvents"></block>
         </category>
         <category name="Camera" colour="#0F3E6C">
           <block type="camera"></block>
@@ -63,6 +64,10 @@
           <block type="camera-component_spectator"></block>
           <block type="camera-component_zoom"></block>
         </category>
+        <category name="Events" colour="#0F0000">
+          <block type="event-set"></block>
+          <block type="event-set__event"></block>
+        </category>
         <category name="Fog" colour="#A7670C">
           <block type="fog"></block>
           <block type="fog-component_type"></block>
@@ -70,17 +75,7 @@
           <block type="fog-component_density"></block>
           <block type="fog-component_far"></block>
           <block type="fog-component_near"></block>
-        </category>
-
-
-          
-        <!-- <category name="Inputs" colour="#93a55b">
-          <block type="vector"></block>
-          <block type="input_colour"></block>
-          <block type="input_number"></block>
-          <block type="input_text"></block>
-        </category> -->
-          
+        </category>          
         <category name="Material" colour="#172073">
           <!--Material Component-->
           <block type="material"></block>
@@ -89,7 +84,6 @@
           <block type="material-component_properties"></block>
           <!--End Material Component-->
         </category>
-
         <category name="Transformations" colour="#A73C0C">
           <!--Position Component-->
             <block type="entity_position">
@@ -116,7 +110,6 @@
           </block>
           <!--End Scale Component-->
         </category>
-
     </xml>
 
     <xml xmlns="https://developers.google.com/blockly/xml" id="primitiveToolbox" style="display: inline">
