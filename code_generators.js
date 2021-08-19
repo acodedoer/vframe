@@ -73,7 +73,7 @@ for(let i = 0; i<free_attributes.length; i++){
   };
 }
 
-const components = ['animation', 'camera', 'fog', 'material', 'event-set']
+const components = ['animation', 'camera', 'fog', 'material', 'event-set', 'environment']
 for(let i = 0; i<components.length; i++){
   HtmlGenerator[components[i]] = function(block) {
     const attributes = HtmlGenerator.statementToCode(block, `${components[i]}_properties`,Blockly.JavaScript.ORDER_ATOMIC);
@@ -88,7 +88,7 @@ for(let i = 0; i<components.length; i++){
   }
 }
 
-const component_properties = ['animation-component_property', 'animation-component_to', 'animation-component_from', 'animation-component_startEvents', 'animation-component_pauseEvents', 'animation-component_resumeEvents','animation-component_dur', 'animation-component_loop', 'animation-component_dir', 'camera-component_active', 'camera-component_far','camera-component_fov','camera-component_near','camera-component_spectator','camera-component_zoom', 'fog-component_type', 'fog-component_color', 'fog-component_near', 'fog-component_far', 'fog-component_density', 'material-component_color', 'material-component_src', 'event-set__event']
+const component_properties = ['animation-component_property','environment-component_preset','environment-component_dressingAmount', 'animation-component_to', 'animation-component_from', 'animation-component_startEvents', 'animation-component_pauseEvents', 'animation-component_resumeEvents','animation-component_dur', 'animation-component_loop', 'animation-component_dir', 'camera-component_active', 'camera-component_far','camera-component_fov','camera-component_near','camera-component_spectator','camera-component_zoom', 'fog-component_type', 'fog-component_color', 'fog-component_near', 'fog-component_far', 'fog-component_density', 'material-component_color', 'material-component_src', 'event-set__event']
 for(let i = 0; i<component_properties.length; i++){
   HtmlGenerator[component_properties[i]] = function(block) {
     const value = [block.getFieldValue(component_properties[i]), Blockly.JavaScript.ORDER_ATOMIC][0];

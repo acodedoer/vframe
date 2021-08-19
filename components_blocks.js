@@ -351,6 +351,70 @@ const componentsBlocks =
   },
   /* End Camera Component*/
 
+  /* Begin Environment Component*/
+    {//environment component
+      "type": "environment",
+      "message0": "add environment %1",
+      "args0": [
+      {
+        "type": "input_statement",
+        "name": "environment_properties",
+        "check": "environment_property"
+      },
+      ],
+      "previousStatement": "component",
+      "nextStatement": "component",
+      "colour": "#0F00CC",
+      "tooltip": "",
+      "helpUrl": ""
+    },
+    { //environment preset 
+      "type": "environment-component_preset",
+      "message0": "set environment preset to %1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "environment-component_preset",
+          "options": [
+            [ "none", "none" ],
+            [ "default", "default" ],
+            [ "contact", "contact" ],
+            [ "egypt", "egypt" ],
+            [ "checkerboard", "checkerboard" ],
+            [ "forest", "forest" ],
+            [ "goaland", "goaland" ],
+            [ "yavapai", "yavapai" ],
+            [ "goldmine", "goldmine" ],
+            [ "threetowers", "threetowers" ],
+            [ "poison", "poison" ]
+          ]
+        }
+      ],
+      "colour": "#0F00CC",
+      "previousStatement": "environment_property",
+      "nextStatement": "environment_property",
+      "tooltip": "",
+      "helpUrl": ""
+    },
+    { //environment dressingAmount 
+      "type": "environment-component_dressingAmount",
+      "message0": "set environment dressing amount to %1",
+      "args0": [
+        {
+          "type": "field_number",
+          "name": "environment-component_dressingAmount",
+          "check": "number",
+          "value": 10
+        }
+      ],
+      "colour": "#0F00CC",
+      "previousStatement": "environment_property",
+      "nextStatement": "environment_property",
+      "tooltip": "",
+      "helpUrl": ""
+    },
+  /* End Environment Component*/
+
   /*Begin Fog Component */
   {//fog
     "type": "fog",
