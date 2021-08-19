@@ -478,8 +478,8 @@ const componentsBlocks =
       "value": 0
     }
   ],
-  "previousStatement": "attribute",
-  "nextStatement": "attribute",
+  "previousStatement": "component",
+  "nextStatement": "component",
   "colour": "#A73C0C",
   "tooltip": "",
   "helpUrl": ""
@@ -530,8 +530,8 @@ const componentsBlocks =
       "value": 0
     }
   ],
-  "previousStatement": "attribute",
-  "nextStatement": "attribute",
+  "previousStatement": "component",
+  "nextStatement": "component",
   "colour": "#A73C0C",
   "tooltip": "",
   "helpUrl": ""
