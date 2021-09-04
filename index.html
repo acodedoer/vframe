@@ -21,7 +21,7 @@
   <nav class="tab">
     <button class="tablinks active" onclick="setCategories(event, 'componentToolbox')">Components</button>
     <button class="tablinks" onclick="setCategories(event, 'primitiveToolbox')">Primitives</button>
-    <!--<button class="tablinks" onclick="setCategories(event, 'javascriptToolbox')">JS</button> -->
+    <button class="tablinks" onclick="setCategories(event, 'scriptsToolbox')">Scripts</button>
   </nav>
   <div id="container">
     <div id="blocklyArea"></div>
@@ -196,6 +196,75 @@
         <block type="text_attributes"></block>
       </category>
     </xml>
+
+    <xml xmlns="https://developers.google.com/blockly/xml" id="scriptsToolbox" style="display: inline">
+      <category name="Camera" colour="#0F3E6C">
+        <block type="camera"></block>
+        <block type="camera-component_active"></block>
+        <block type="camera-component_far"></block>
+        <block type="camera-component_fov"></block>
+        <block type="camera-component_near"></block>
+        <block type="camera-component_spectator"></block>
+        <block type="camera-component_zoom"></block>
+      </category>
+      <category name="Events" colour="#0F0000">
+        <block type="event-set"></block>
+        <block type="event-set__event"></block>
+      </category>
+      <category name="Environment" colour="#0F00CC">
+        <block type="environment"></block>
+        <block type="environment-component_dressingAmount"></block>
+        <block type="environment-component_preset"></block>
+      </category>
+      <category name="Fog" colour="#A7670C">
+        <block type="fog"></block>
+        <block type="fog-component_type"></block>
+        <block type="fog-component_color"></block>
+        <block type="fog-component_density"></block>
+        <block type="fog-component_far"></block>
+        <block type="fog-component_near"></block>
+      </category>          
+      <category name="Material" colour="#172073">
+        <!--Material Component-->
+        <block type="material"></block>
+        <block type="material-component_color"></block>
+        <block type="material-component_src"></block>
+        <block type="material-component_properties"></block>
+        <!--End Material Component-->
+      </category>
+      <category name="Transformations" colour="#A73C0C">
+        <!--Position Component-->
+          <block type="entity_position">
+              <field name="x"></field>
+              <field name="y"></field>
+              <field name="z"></field>
+            </block>
+
+        <!--End Position Component-->
+
+        <!--Rotation Component-->
+        <block type="entity_rotation">
+                <field name="x"></field>
+                <field name="y"></field>
+                <field name="z"></field>
+        </block>
+        <!--End Rotation Component-->
+
+        <!--Scale Component-->
+        <block type="entity_scale">
+                <field name="x"></field>
+                <field name="y"></field>
+                <field name="z"></field>
+        </block>
+        <!--End Scale Component-->
+      </category>
+      <category name="Sound" colour="#E900AA">
+        <block type="sound"></block>
+        <block type="sound-component_autoplay"></block>
+        <block type="sound-component_src"></block>
+        <block type="sound-component_properties"></block>
+      </category>
+  </xml>
 
       <script src="blockly_compressed.js"></script>
       <script src="javascript_compressed.js"></script>
