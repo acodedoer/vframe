@@ -39,7 +39,7 @@ function setCategories(e, toolbox){
     <li>Set its id to “sun”</li>
     <li>Set its position to (0 0 -10)</li>
     <li>Set its radius to 3</li>
-    <li>Set its material source to "https://www.solarsystemscope.com/textures/download/2k_sun.jpg"</li>
+    <li>Set its color to a bright shade of yellow</li>
   </ul>
   </li>
 
@@ -48,16 +48,16 @@ function setCategories(e, toolbox){
     <li>Set its id to "earth"</li>
     <li>Set its position to (7 0 0)</li>
     <li>Set its radius to 1</li>
-    <li>Set its material source to "https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg"</li>
+    <li>Set its color to a light shade of blue</li>
   </ul>
   </li>
 
   <li>Add another sphere to the scene as a child of the sphere with id "earth".
   <ul>
     <li>Set its id to "moon"</li>
-    <li>Set its position to (2 0 0)</li>
+    <li>Set its position to (1.5 0 0)</li>
     <li>Set its radius to 0.2</li>
-    <li>Set its material source to "https://www.solarsystemscope.com/textures/download/2k_moon.jpg"</li>
+    <li>Set its color to gray</li>
   </ul>
   </li>
   <li>Add an animation component to the sphere with id “sun”</li>
@@ -76,8 +76,8 @@ function setCategories(e, toolbox){
   </div>`
   const final = `<div id ='final' style="height:calc(100% - 48px); width:100%"><a-scene embedded>
   <a-entity id="scene">
-  <a-sphere radius="3" id="sun" src="https://www.solarsystemscope.com/textures/download/2k_sun.jpg" color="#ffcc33" position="0 0 -10" animation__515="  property: rotation;to: 0 360 0;loop: true;dur: 15000;" material="" geometry="">
-  <a-sphere radius="1" id="earth" src="https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg" position="7 0 0" animation__516="  property: rotation;to: 0 360 0;dur: 5000;loop: true;" material="" geometry="">   <a-sphere id="moon" src="https://www.solarsystemscope.com/textures/download/2k_moon.jpg" radius="0.2" position="2 0 0" material="" geometry="">
+  <a-sphere radius="3" id="sun" color="#ffcc33" position="0 0 -10" animation__515="  property: rotation;to: 0 360 0;loop: true;dur: 15000;" material="" geometry="">
+  <a-sphere radius="1" id="earth" color="#87CEEB" position="7 0 0" animation__516="  property: rotation;to: 0 360 0;dur: 5000;loop: true;" material="" geometry="">   <a-sphere id="moon" color="#808080" radius="0.2" position="1.5 0 0" material="" geometry="">
   </a-sphere></a-sphere></a-sphere></a-entity></a-scene><div>`
   if(div == "instructions"){
     str= nav+ inst;
