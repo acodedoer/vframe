@@ -1,0 +1,93 @@
+html, body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #container {
+    margin: 0;
+    height:calc(100vh - 48px);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 70%;
+    -ms-grid-rows: 50% 50%;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "blockly     frameSite"
+      "blockly     testDiv";
+  }
+
+  #blocklyArea  {grid-area: blockly; -ms-grid-row:1;-ms-grid-column:1; -ms-grid-row-span:4;}
+  #frameSite {grid-area: frameSite; border: 5px solid #ccc;  -ms-grid-row:10;-ms-grid-column:0;margin: 1px}
+  #testDiv {grid-area: testDiv; border: 5px solid #ccc;  -ms-grid-row:10;-ms-grid-column:0; margin: 1px;}
+
+
+  #instructions{
+    height:calc(100% - 48px);
+    overflow: auto;
+    font-size: 1.2em;
+  }
+  
+  #output{
+    width: 100%;
+    height: calc(100% - 48px)
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #dddddd;
+    margin-bottom: 1px;
+    display: none;
+  }
+
+  #site-name{
+    font-size: 2em;
+    
+  }
+  i{
+    font-size: 2em;
+    padding-left: 2em;
+
+  }
+/* Begin code from https://www.w3schools.com/howto/howto_js_tabs.asp */
+/* Style the tab */
+.tab, .testTab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button, .testTab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover, .testTab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active, .testTab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* End code from https://www.w3schools.com/howto/howto_js_tabs.asp */
