@@ -55,7 +55,7 @@ function setCategories(e, toolbox){
   <li>Add another sphere to the scene as a child of the sphere with id "earth".
   <ul>
     <li>Set its id to "moon"</li>
-    <li>Set its position to (1.5 0 0)</li>
+    <li>Set its position to (1.5  0 0)</li>
     <li>Set its radius to 0.2</li>
     <li>Set its color to gray</li>
   </ul>
