@@ -12,6 +12,7 @@ let workspace = Blockly.inject('blocklyArea', {
 
 function setCategories(e, toolbox){
   workspace.updateToolbox(document.getElementById(toolbox));
+  workspace.getFlyout().setVisible(false);
 
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -32,7 +33,7 @@ function setCategories(e, toolbox){
     <button id ="btnfinal" class="tablinks_" onclick="setDiv1(event,'final')">Task 1: Final Scene</button>
     </nav>`
    let str = "";
-    const inst = `<div id = "instructions">Use the Components and Primitive blocks in the workspace (to the right) to complete the tasks below. Your completed scene, which will be shown in the output window, should look like the scene shown on the Final Scene tab.
+    const inst = `<div id = "instructions">Use the Components and Primitive blocks in the workspace (to the right) to complete the tasks below. Your completed scene, which will be shown in the output pane above, should look like the scene shown on the Final Scene tab.
     <ol>
     <li>Add a box to the scene
     <ul>
@@ -94,7 +95,7 @@ function setCategories(e, toolbox){
     else if (div == "final"){
       str = nav + final;
     }
-    const parent = document.getElementById("testDiv1")
+    const parent = document.getElementById("testDiv")
     parent.innerHTML = str;
     if(div=="final"){
       document.getElementById("btninstructions").classList.remove("active");

@@ -26,7 +26,12 @@
   <div id="container">
     <div id="blocklyArea"></div>
       <div id="frameSite">
-        <a-scene embedded>
+        <div>
+          <nav class="tab">
+            <button class="tablinks active" >Output</button>
+          </nav>
+        </div>
+        <a-scene embedded id = "output">
           <a-entity id="rig" position="0 1.6 4">
             <a-entity id="camera" camera look-controls wasd-controls></a-entity>
           </a-entity>
@@ -34,10 +39,16 @@
           </a-entity>
         </a-scene>
       </div>
-      <pre id="sourceCode"></pre>
+      <div id = "source">
+        <nav class="tab">
+          <button class="tablinks active">Generated A-Frame Code</button>
+          </nav>
+          <pre id="sourceCode"></pre>
+      </div>
+      
     </div>
     <xml xmlns="https://developers.google.com/blockly/xml" id="componentToolbox" style="display: inline">
-        <category name="Entity" colour="#C90000">
+        <category name="Entity" colour="#7A0000">
           <!--Entity-->
           <block type= "entity"></block>
           <block type= "entity_childless"></block>
@@ -126,11 +137,11 @@
     </xml>
 
     <xml xmlns="https://developers.google.com/blockly/xml" id="primitiveToolbox" style="display: inline">
-      <category name="Primitive Entity" colour="#C90000">
+      <category name="Primitive Entity" colour="#FF0A0A">
         <!--Entity-->
         <block type= "primitive_entity"></block>
         <block type= "primitive_entity_childless"></block>
-        <block type="entity_id"></block>
+        <block type="primitiveentity_id"></block>
       </category>
       <category name="Camera" colour="#00A100">
         <block type="camera_primitive"></block>

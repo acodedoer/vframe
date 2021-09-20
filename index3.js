@@ -12,6 +12,7 @@ let workspace = Blockly.inject('blocklyArea', {
 
 function setCategories(e, toolbox){
   workspace.updateToolbox(document.getElementById(toolbox));
+  workspace.getFlyout().setVisible(false);
 
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -79,7 +80,7 @@ function setCategories(e, toolbox){
   else if (div == "final"){
     str = nav + final;
   }
-  const parent = document.getElementById("testDiv3")
+  const parent = document.getElementById("testDiv")
   parent.innerHTML = str;
   if(div=="final"){
     document.getElementById("btninstructions").classList.remove("active");

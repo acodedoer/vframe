@@ -2,61 +2,11 @@
 
 const primitivesBlocks =
 [
-/* Begin Entities*/
-{//primitive entity
-  "type": "primitive_entity",
-  "message0": "create %1 component(s) %2 child(ren) %3",
-  "args0": [
-  {
-    "type": "input_value",
-    "name": "primitive_entity",
-    "check": "entity_primitive"
-  },
-  {
-    "type": "input_statement",
-    "name": "components",
-    "check": "component"
-  },
-  {
-    "type": "input_statement",
-    "name": "children",
-    "check": ["entity", "primitive"]
-  }
-  ],
-  "previousStatement": ["entity", "primitive"],
-  "nextStatement": ["entity", "primitive"],
-  "colour": "#323031",
-  "tooltip": "",
-  "helpUrl": ""
-},
-{ //childless primitive entity
-  "type": "primitive_entity_childless",
-  "message0": "create %1 component(s) %2",
-  "args0": [
-  {
-    "type": "input_value",
-    "name": "primitive_entity",
-    "check": "entity_primitive"
-  },
-  {
-    "type": "input_statement",
-    "name": "components",
-    "check": "component"
-  }
-  ],
-  "previousStatement": ["entity", "primitive"],
-  "nextStatement": ["entity", "primitive"],
-  "colour": "#323031",
-  "tooltip": "",
-  "helpUrl": ""
-},
-/* End Entities*/
-
 /************************************ BEGIN PRIMITIVES ********************************************************/
 /* Begin Camera*/
 {//camera
   "type": "camera_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -188,7 +138,7 @@ const primitivesBlocks =
 /* Geometry Based Primitives*/
 {//box primitive
   "type": "box_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -213,7 +163,7 @@ const primitivesBlocks =
 },
 {//sphere primitive with attributes
   "type": "sphere_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -238,7 +188,7 @@ const primitivesBlocks =
 },
 {//circle primitive
   "type": "circle_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -263,7 +213,7 @@ const primitivesBlocks =
 },
 {//cylinder primitive
   "type": "cylinder_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -288,7 +238,7 @@ const primitivesBlocks =
 },
 {//cone primitive
   "type": "cone_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -313,7 +263,7 @@ const primitivesBlocks =
 },
 {//plane primitive
   "type": "plane_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -338,7 +288,7 @@ const primitivesBlocks =
 },
 {//torus primitive
   "type": "torus_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -362,7 +312,7 @@ const primitivesBlocks =
 },
 {//dedacahedron primitive
   "type": "dodecahedron_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -386,7 +336,7 @@ const primitivesBlocks =
 },
 {//icosahedron primitive
   "type": "icosahedron_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -410,7 +360,7 @@ const primitivesBlocks =
 },
 {//octahedron primitive
   "type": "octahedron_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -434,7 +384,7 @@ const primitivesBlocks =
 },
 {//tetrahedron primitive
   "type": "tetrahedron_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -458,7 +408,7 @@ const primitivesBlocks =
 },
 {//torus-knot primitive
   "type": "torus-knot_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -853,7 +803,7 @@ const primitivesBlocks =
 /* Begin Sound Primitive */
 { //sound primitive
   "type": "sound_primitive",
-  "message0": "a %1 %2 from %3",
+  "message0": "%1 %2 from %3",
   "args0": [
     {
       "type": "field_dropdown",
@@ -954,7 +904,7 @@ const primitivesBlocks =
 /* Begin Cursor Primitive */
 { //cursor primitive
   "type": "cursor_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -1132,7 +1082,7 @@ const primitivesBlocks =
 /*Begin Text Primitives*/
 { //text
   "type": "text_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_label",
@@ -1208,7 +1158,7 @@ const primitivesBlocks =
 /* Begin Light*/
 {//light
   "type": "light_primitive",
-  "message0": "a %1 %2",
+  "message0": "%1 %2",
   "args0": [
     {
       "type": "field_dropdown",

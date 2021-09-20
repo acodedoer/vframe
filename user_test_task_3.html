@@ -40,7 +40,7 @@
           </a-scene>
         </div>
       </div>
-      <div id="testDiv3">
+      <div id="testDiv">
       </div>
     </div>
     <xml id="task3" style="display: none;" xmlns="https://developers.google.com/blockly/xml">
@@ -57,166 +57,166 @@
           </block>
         </value><statement name="components"><block type="entity_id" id=";J3A|T#K6BXuK.]==|^Y"><field name="entity_id">box1</field><next><block type="entity_position" id="i7Oyg8C/e@C+/INQmeLI"><field name="x">-3</field><field name="y">0</field><field name="z">0</field></block></next></block></statement><next><block type="primitive_entity_childless" id="h#=0TOQCL6{[S(0p!X6+"><value name="primitive_entity"><block type="box_primitive" id=")!{47Y@Fs`iKXRy;q|0{"><mutation attributesStatements="true"></mutation><field name="primitive_attributes">custom</field><statement name="attributesStatements"><block type="geometry_color" id=")J:s}^Mv*BCk)u+La[*r"><field name="geometry_color">#009900</field></block></statement></block></value><statement name="components"><block type="entity_id" id="Ql,O/_n.xLLkL*$H3oMo"><field name="entity_id">box2</field></block></statement><next><block type="primitive_entity_childless" id="w^y/y(8.#LS??btoZWzh"><value name="primitive_entity"><block type="box_primitive" id="#@ciQ3eJmXmZWDU9~P$L"><mutation attributesStatements="true"></mutation><field name="primitive_attributes">custom</field><statement name="attributesStatements"><block type="geometry_color" id="0(ac1C,=_AzaSj@fhspk"><field name="geometry_color">#3333ff</field></block></statement></block></value><statement name="components"><block type="entity_id" id="l15h`r-h4a$!3P:~@@x*"><field name="entity_id">box3</field><next><block type="entity_position" id="S|{c^CDse/S]swg?1T=p"><field name="x">3</field><field name="y">0</field><field name="z">0</field></block></next></block></statement></block></next></block></next></block></xml>
 
-    <xml xmlns="https://developers.google.com/blockly/xml" id="componentToolbox" style="display: inline">
-        <category name="Entity" colour="#C90000">
+        <xml xmlns="https://developers.google.com/blockly/xml" id="componentToolbox" style="display: inline">
+          <category name="Entity" colour="#7A0000">
+            <!--Entity-->
+            <block type= "entity"></block>
+            <block type= "entity_childless"></block>
+            <block type="entity_id"></block>
+            <!--End Entity-->
+          </category>
+          <category name="Animation" colour="#087149">
+            <block type="animation"></block>
+            <block type="animation-component_id"></block>
+            <block type="animation-component_property"></block>
+            <block type="animation-component_to"></block>
+            <block type="animation-component_from"></block>
+            <block type="animation-component_dur"></block>
+            <block type="animation-component_loop"></block>
+            <block type="animation-component_dir"></block>
+            <block type="animation-component_startEvents"></block>
+            <block type="animation-component_pauseEvents"></block>
+            <block type="animation-component_resumeEvents"></block>
+          </category>
+          <category name="Camera" colour="#0F3E6C">
+            <block type="camera"></block>
+            <block type="camera-component_active"></block>
+            <block type="camera-component_far"></block>
+            <block type="camera-component_fov"></block>
+            <block type="camera-component_near"></block>
+            <block type="camera-component_spectator"></block>
+            <block type="camera-component_zoom"></block>
+          </category>
+          <category name="Events" colour="#0F0000">
+            <block type="event-set"></block>
+            <block type="event-set__event"></block>
+          </category>
+          <category name="Environment" colour="#0F00CC">
+            <block type="environment"></block>
+            <block type="environment-component_dressingAmount"></block>
+            <block type="environment-component_preset"></block>
+          </category>
+          <category name="Fog" colour="#A7670C">
+            <block type="fog"></block>
+            <block type="fog-component_type"></block>
+            <block type="fog-component_color"></block>
+            <block type="fog-component_density"></block>
+            <block type="fog-component_far"></block>
+            <block type="fog-component_near"></block>
+          </category>          
+          <category name="Material" colour="#172073">
+            <!--Material Component-->
+            <block type="material"></block>
+            <block type="material-component_color"></block>
+            <block type="material-component_src"></block>
+            <block type="material-component_properties"></block>
+            <!--End Material Component-->
+          </category>
+          <category name="Transformations" colour="#A73C0C">
+            <!--Position Component-->
+              <block type="entity_position">
+                  <field name="x"></field>
+                  <field name="y"></field>
+                  <field name="z"></field>
+                </block>
+  
+            <!--End Position Component-->
+  
+            <!--Rotation Component-->
+            <block type="entity_rotation">
+                    <field name="x"></field>
+                    <field name="y"></field>
+                    <field name="z"></field>
+            </block>
+            <!--End Rotation Component-->
+  
+            <!--Scale Component-->
+            <block type="entity_scale">
+                    <field name="x"></field>
+                    <field name="y"></field>
+                    <field name="z"></field>
+            </block>
+            <!--End Scale Component-->
+          </category>
+          <category name="Sound" colour="#E900AA">
+            <block type="sound"></block>
+            <block type="sound-component_autoplay"></block>
+            <block type="sound-component_src"></block>
+            <block type="sound-component_properties"></block>
+          </category>
+      </xml>
+  
+      <xml xmlns="https://developers.google.com/blockly/xml" id="primitiveToolbox" style="display: inline">
+        <category name="Primitive Entity" colour="#FF0A0A">
           <!--Entity-->
-          <block type= "entity"></block>
-          <block type= "entity_childless"></block>
-          <block type="entity_id"></block>
-          <!--End Entity-->
+          <block type= "primitive_entity"></block>
+          <block type= "primitive_entity_childless"></block>
+          <block type="primitiveentity_id"></block>
         </category>
-        <category name="Animation" colour="#087149">
-          <block type="animation"></block>
-          <block type="animation-component_id"></block>
-          <block type="animation-component_property"></block>
-          <block type="animation-component_to"></block>
-          <block type="animation-component_from"></block>
-          <block type="animation-component_dur"></block>
-          <block type="animation-component_loop"></block>
-          <block type="animation-component_dir"></block>
-          <block type="animation-component_startEvents"></block>
-          <block type="animation-component_pauseEvents"></block>
-          <block type="animation-component_resumeEvents"></block>
+        <category name="Camera" colour="#00A100">
+          <block type="camera_primitive"></block>
+          <block type="camera_far"></block>
+          <block type="camera_fov"></block>
+          <block type="camera_look-controls-enabled"></block>
+          <block type="camera_near"></block>
+          <block type="camera_reverse-mouse-drag"></block>
+          <block type="camera_wasd-controls-enabled"></block>
         </category>
-        <category name="Camera" colour="#0F3E6C">
-          <block type="camera"></block>
-          <block type="camera-component_active"></block>
-          <block type="camera-component_far"></block>
-          <block type="camera-component_fov"></block>
-          <block type="camera-component_near"></block>
-          <block type="camera-component_spectator"></block>
-          <block type="camera-component_zoom"></block>
+        <category name="Cursor" colour="#C97A00">
+          <block type="cursor_primitive"></block>
+          <block type="cursor_far"></block>
+          <block type="cursor_fuse"></block>
+          <block type="cursor_fuse-timeout"></block>
+          <block type="cursor_interval"></block>
+          <block type="cursor_objects"></block>
         </category>
-        <category name="Events" colour="#0F0000">
-          <block type="event-set"></block>
-          <block type="event-set__event"></block>
-        </category>
-        <category name="Environment" colour="#0F00CC">
-          <block type="environment"></block>
-          <block type="environment-component_dressingAmount"></block>
-          <block type="environment-component_preset"></block>
-        </category>
-        <category name="Fog" colour="#A7670C">
-          <block type="fog"></block>
-          <block type="fog-component_type"></block>
-          <block type="fog-component_color"></block>
-          <block type="fog-component_density"></block>
-          <block type="fog-component_far"></block>
-          <block type="fog-component_near"></block>
-        </category>          
-        <category name="Material" colour="#172073">
-          <!--Material Component-->
-          <block type="material"></block>
-          <block type="material-component_color"></block>
-          <block type="material-component_src"></block>
-          <block type="material-component_properties"></block>
-          <!--End Material Component-->
-        </category>
-        <category name="Transformations" colour="#A73C0C">
-          <!--Position Component-->
-            <block type="entity_position">
-                <field name="x"></field>
-                <field name="y"></field>
-                <field name="z"></field>
-              </block>
-
-          <!--End Position Component-->
-
-          <!--Rotation Component-->
-          <block type="entity_rotation">
-                  <field name="x"></field>
-                  <field name="y"></field>
-                  <field name="z"></field>
+        <category name="Geometry Based" colour="#00567F">
+          <block type= "box_primitive">
           </block>
-          <!--End Rotation Component-->
-
-          <!--Scale Component-->
-          <block type="entity_scale">
-                  <field name="x"></field>
-                  <field name="y"></field>
-                  <field name="z"></field>
-          </block>
-          <!--End Scale Component-->
+          <block type= "sphere_primitive"></block>
+          <block type= "plane_primitive"></block>
+          <block type= "cylinder_primitive"></block>
+          <block type= "cone_primitive"></block>
+          <block type= "torus_primitive"></block>
+          <block type= "dodecahedron_primitive"></block>
+          <block type= "icosahedron_primitive"></block>
+          <block type= "octahedron_primitive"></block>
+          <block type= "tetrahedron_primitive"></block>
+          <block type= "torus-knot_primitive"></block>
+          <block type="curvedimage_primitive"></block>
+          <block type='image_primitive'></block>
+          <block type='videosphere_primitive'></block>
+          <block type='video_primitive'></block>
+          <block type='sky_primitive'></block>
+          <block type= "geometry_width"></block>
+          <block type= "geometry_height"></block>
+          <block type= "geometry_depth"></block>
+          <block type= "geometry_radius"></block>    
+          <block type= "geometry_color"></block> 
+          <block type= "geometry_attributes"></block>       
         </category>
-        <category name="Sound" colour="#E900AA">
-          <block type="sound"></block>
-          <block type="sound-component_autoplay"></block>
-          <block type="sound-component_src"></block>
-          <block type="sound-component_properties"></block>
+        <category name="Light" colour="#ADC400">
+          <block type="light_primitive"></block>
+          <block type="light_type"></block>
+          <block type="light_angle"></block>
+          <block type="light_color"></block>
         </category>
-    </xml>
-
-    <xml xmlns="https://developers.google.com/blockly/xml" id="primitiveToolbox" style="display: inline">
-      <category name="Entity" colour="#C90000">
-        <!--Entity-->
-        <block type= "primitive_entity"></block>
-        <block type= "primitive_entity_childless"></block>
-        <block type="entity_id"></block>
-      </category>
-      <category name="Camera" colour="#00A100">
-        <block type="camera_primitive"></block>
-        <block type="camera_far"></block>
-        <block type="camera_fov"></block>
-        <block type="camera_look-controls-enabled"></block>
-        <block type="camera_near"></block>
-        <block type="camera_reverse-mouse-drag"></block>
-        <block type="camera_wasd-controls-enabled"></block>
-      </category>
-      <category name="Cursor" colour="#C97A00">
-        <block type="cursor_primitive"></block>
-        <block type="cursor_far"></block>
-        <block type="cursor_fuse"></block>
-        <block type="cursor_fuse-timeout"></block>
-        <block type="cursor_interval"></block>
-        <block type="cursor_objects"></block>
-      </category>
-      <category name="Geometry Based" colour="#00567F">
-        <block type= "box_primitive">
-        </block>
-        <block type= "sphere_primitive"></block>
-        <block type= "plane_primitive"></block>
-        <block type= "cylinder_primitive"></block>
-        <block type= "cone_primitive"></block>
-        <block type= "torus_primitive"></block>
-        <block type= "dodecahedron_primitive"></block>
-        <block type= "icosahedron_primitive"></block>
-        <block type= "octahedron_primitive"></block>
-        <block type= "tetrahedron_primitive"></block>
-        <block type= "torus-knot_primitive"></block>
-        <block type="curvedimage_primitive"></block>
-        <block type='image_primitive'></block>
-        <block type='videosphere_primitive'></block>
-        <block type='video_primitive'></block>
-        <block type='sky_primitive'></block>
-        <block type= "geometry_width"></block>
-        <block type= "geometry_height"></block>
-        <block type= "geometry_depth"></block>
-        <block type= "geometry_radius"></block>    
-        <block type= "geometry_color"></block> 
-        <block type= "geometry_attributes"></block>       
-      </category>
-      <category name="Light" colour="#ADC400">
-        <block type="light_primitive"></block>
-        <block type="light_type"></block>
-        <block type="light_angle"></block>
-        <block type="light_color"></block>
-      </category>
-      <category name="Model" colour="#430088">
-        <block type="gltf-model_primitive"></block>
-      </category>
-      <category name="Sound" colour="#A1005B">
-        <block type="sound_primitive"></block>
-        <block type="sound_autoplay"></block>
-        <block type="sound_loop"></block>
-        <block type="sound_on"></block>
-        <block type="sound_volume"></block>
-      </category>
-      <category name="Text" colour="#00DB9E">
-        <block type="text_primitive"></block>
-        <block type="text_value"></block>
-        <block type="text_attributes"></block>
-      </category>
-    </xml>
+        <category name="Model" colour="#430088">
+          <block type="gltf-model_primitive"></block>
+        </category>
+        <category name="Sound" colour="#A1005B">
+          <block type="sound_primitive"></block>
+          <block type="sound_autoplay"></block>
+          <block type="sound_loop"></block>
+          <block type="sound_on"></block>
+          <block type="sound_volume"></block>
+        </category>
+        <category name="Text" colour="#00DB9E">
+          <block type="text_primitive"></block>
+          <block type="text_value"></block>
+          <block type="text_attributes"></block>
+        </category>
+      </xml>
   </div>
       <script src="blockly_compressed.js"></script>
       <script src="javascript_compressed.js"></script>

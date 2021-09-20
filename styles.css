@@ -19,7 +19,7 @@ html, body {
 
   #blocklyArea  {grid-area: blockly; -ms-grid-row:1;-ms-grid-column:1; -ms-grid-row-span:4;}
   #frameSite {grid-area: frameSite; border: 5px solid #444;  -ms-grid-row:10;-ms-grid-column:0;margin: 1px}
-  #sourceCode {grid-area: sourceCode; border: 5px solid rgb(255, 0, 0);overflow: auto;  -ms-grid-row:10;-ms-grid-column:0; margin: 1px;}
+  #source {grid-area: sourceCode; border: 5px solid #444;overflow: auto;  -ms-grid-row:10;-ms-grid-column:0; margin: 1px;}
 
 
   header{
@@ -47,6 +47,11 @@ html, body {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+}
+
+pre{
+  padding: 0;
+  margin: 0;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -80,3 +85,8 @@ html, body {
   border-top: none;
 }
 /* End code from https://www.w3schools.com/howto/howto_js_tabs.asp */
+
+#output{
+  width: 100%;
+  height: calc(100% - 48px)
+}

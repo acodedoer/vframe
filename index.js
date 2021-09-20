@@ -12,7 +12,9 @@ let workspace = Blockly.inject('blocklyArea', {
 
 function setCategories(e, toolbox){
   workspace.updateToolbox(document.getElementById(toolbox));
+  workspace.getFlyout().setVisible(false);
 
+  workspace.toolbox
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -30,6 +32,7 @@ function myUpdateFunction(event) {
   var workspace_code = HtmlGenerator.workspaceToCode(workspace);
   const scene = document.getElementById('scene')
   scene.innerHTML = workspace_code   
+  document.getElementById('sourceCode').innerText = workspace_code;
 }
 workspace.addChangeListener(myUpdateFunction);
 

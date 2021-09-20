@@ -23,7 +23,7 @@ const entitiesBlocks =
     ],
     "previousStatement": "entity",
     "nextStatement": "entity",
-    "colour": "#C90000",
+    "colour": "#7A0000",
     "tooltip": "",
     "helpUrl": ""
   },
@@ -42,13 +42,30 @@ const entitiesBlocks =
   ],
   "previousStatement": "entity",
   "nextStatement": "entity",
-  "colour": "#C90000",
+  "colour": "#7A0000",
   "tooltip": "",
   "helpUrl": ""
   },
+  ,
+  {//entity id
+    "type": "entity_id",
+    "message0": "set entity id to %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "entity_id",
+        "value": 18
+      }
+    ],
+    "colour": "#7A0000",
+    "previousStatement": "component",
+    "nextStatement": "component",
+    "tooltip": "",
+    "helpUrl": ""
+  },
   {//primitive entity
     "type": "primitive_entity",
-    "message0": "create %1 component(s) %2 child(ren) %3",
+    "message0": "create a primitive%1 component(s) %2 child(ren) %3",
     "args0": [
     {
       "type": "input_value",
@@ -68,13 +85,13 @@ const entitiesBlocks =
     ],
     "previousStatement": ["entity", "primitive"],
     "nextStatement": ["entity", "primitive"],
-    "colour": "#C90000",
+    "colour": "#FF0A0A",
     "tooltip": "",
     "helpUrl": ""
   },
   { //childless primitive entity
     "type": "primitive_entity_childless",
-    "message0": "create %1 component(s) %2",
+    "message0": "create a primitive %1 component(s) %2",
     "args0": [
     {
       "type": "input_value",
@@ -89,21 +106,21 @@ const entitiesBlocks =
     ],
     "previousStatement": ["entity", "primitive"],
     "nextStatement": ["entity", "primitive"],
-    "colour": "#C90000",
+    "colour": "#FF0A0A",
     "tooltip": "",
     "helpUrl": ""
   },
   {//entity id
-    "type": "entity_id",
+    "type": "primitiveentity_id",
     "message0": "set entity id to %1",
     "args0": [
       {
         "type": "field_input",
-        "name": "entity_id",
+        "name": "primitiveentity_id",
         "value": 18
       }
     ],
-    "colour": "#C90000",
+    "colour": "#FF0A0A",
     "previousStatement": "component",
     "nextStatement": "component",
     "tooltip": "",

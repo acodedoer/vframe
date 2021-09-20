@@ -51,7 +51,7 @@ for(let i = 0; i<primitive_geometries.length; i++){
   }
 }
 
-const primitive_attributes = ['entity_id','geometry_depth','sound_autoplay','sound_loop','sound_on','sound_volume','geometry_color', 'cursor_far','cursor_fuse','cursor_fuse-timeout','cursor_interval','cursor_objects', 'geometry_width', 'geometry_height', 'geometry_radius', 'text_value', 'text_font', 'light_angle', 'light_color', 'light_type', "camera_wasd-controls-enabled", "camera_reverse-mouse-drag", "camera_look-controls-enabled", "camera_near", "camera_fov", "camera_far"]
+const primitive_attributes = ['entity_id','primitiveentity_id','geometry_depth','sound_autoplay','sound_loop','sound_on','sound_volume','geometry_color', 'cursor_far','cursor_fuse','cursor_fuse-timeout','cursor_interval','cursor_objects', 'geometry_width', 'geometry_height', 'geometry_radius', 'text_value', 'text_font', 'light_angle', 'light_color', 'light_type', "camera_wasd-controls-enabled", "camera_reverse-mouse-drag", "camera_look-controls-enabled", "camera_near", "camera_fov", "camera_far"]
 for(let i = 0; i<primitive_attributes.length; i++){
   HtmlGenerator[primitive_attributes[i]] = function(block) {
     const value = [block.getFieldValue(primitive_attributes[i]), Blockly.JavaScript.ORDER_ATOMIC][0];
