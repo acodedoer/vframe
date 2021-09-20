@@ -15,7 +15,12 @@ HtmlGenerator['entity'] = function(block) {
   const components = HtmlGenerator.statementToCode(block, 'components');
   const children = HtmlGenerator.statementToCode(block, 'children');
   const code = `<a-entity ${components}> ${children} </a-entity>`;
-  console.log(code)
+  return code;
+};
+
+HtmlGenerator['entity_childless'] = function(block) {
+  const components = HtmlGenerator.statementToCode(block, 'components');
+  const code = `<a-entity ${components}> </a-entity>`;
   return code;
 };
 

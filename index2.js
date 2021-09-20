@@ -20,66 +20,72 @@ function setCategories(e, toolbox){
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].className = tablinks[i].className.replace("active", "");
   }
   document.getElementById(toolbox).style.display = "block";
-  e.currentTarget.className += "active";
+  e.currentTarget.className += " active";
  }
 
- function setDiv3(e, div="instructions"){
+ function setDiv2(e, div="instructions"){
   const nav = `<nav class="testTab" id ="testTab">
-  <button id="btninstructions" class="tablinks active" onclick="setDiv3(event, 'instructions')">Task 3: Instructions</button>
-  <button id ="btnfinal" class="tablinks" onclick="setDiv3(event,'final')">Task 3: Final Scene</button>
+  <button id="btninstructions" class="tablinks_ active" onclick="setDiv2(event, 'instructions')">Task 2: Instructions</button>
+  <button id ="btnfinal" class="tablinks_" onclick="setDiv2(event,'final')">Task 2: Final Scene</button>
   </nav>`
  let str = "";
-  const inst = `<div id = "instructions">Use the Components and Primitive blocks, and the blocks already added in the workspace (to the right) to complete the tasks below. Your completed scene, which will be shown in the pane above, should look like the scene shown on the Final Scene tab.
+  const inst = `<div id = "instructions">Use the Components and Primitive blocks in the workspace (to the right) to complete the tasks below. Your completed scene, which will be shown in the pane above, should look like the scene shown on the Final Scene tab.
   <ol>
-  <li>Add an environment to the scene.
+  <li>Add a sphere to the scene.
   <ul>
-    <li>Set its preset to "Egypt"</li>
-    <li>Set its dressing amount to 20</li>
-  </ul>
-  <li>Change the y position of all three boxes in the scene to 1</li>
-  <li>Change the colour of the box with id "box2" to "#88888"</li>
-  <li>Change the scale of the boxes with id "box1" and "box3" to (1 1 2)</li>
-  <li>Add a new camera to the scene
-  <ul>
-    <li>Set its position (0 3 5)</li>
+    <li>Set its id to “sun”</li>
+    <li>Set its position to (0 0 -10)</li>
+    <li>Set its radius to 3</li>
+    <li>Set its color to a bright shade of yellow</li>
   </ul>
   </li>
-  <li>Add a cursor to the scene as a child of the new camera</li>
-  <li>Add an animation component to the box with id "box2"
+
+  <li>Add another sphere to the scene as a child of the sphere with id "sun".
   <ul>
-    <li>Set its start animation event to "mouseenter"</li>
-    <li>Set its animation propert to "position"</li>
-    <li> Set it to animate to position 2 along the y axis</li>
+    <li>Set its id to "earth"</li>
+    <li>Set its position to (7 0 0)</li>
+    <li>Set its radius to 1</li>
+    <li>Set its color to a light shade of blue</li>
   </ul>
   </li>
-  <li>Add another animation component to the box with id "box2"
+
+  <li>Add another sphere to the scene as a child of the sphere with id "earth".
   <ul>
-    <li>Set its start animation event to "mouseleave"</li>
-    <li>Set its animation propert to "position""</li>
-    <li> Set it to animate to position 1 along the y axis</li>
+    <li>Set its id to "moon"</li>
+    <li>Set its position to (1.5  0 0)</li>
+    <li>Set its radius to 0.2</li>
+    <li>Set its color to gray</li>
+  </ul>
+  </li>
+  <li>Add an animation component to the sphere with id “sun”</li>
+  <ul>
+    <li>Set up the animation component to raotate the sun 360 degrees about it y axis for a duraion of 15 seconds</li>
+    <li>Set the animation loop to "true"</li>
+  </ul>
+  </li>
+  <li>Add an animation component to the sphere with id “sun”</li>
+  <ul>
+  <li>Set up the animation component to raotate the earth 360 degrees about it y axis for a duraion of 5 seconds</li>
+  <li>Set the animation loop to "true"</li>
   </ul>
   </li>
   <ol>
   </div>`
   const final = `<div id ='final' style="height:calc(100% - 48px); width:100%"><a-scene embedded>
   <a-entity id="scene">
-  <a-entity environment="  preset: egypt;dressingAmount: 20;"></a-entity>
-      <a-camera position="0 3 5" camera="" rotation="" look-controls="" wasd-controls="">   
-        <a-cursor>  </a-cursor>
-      </a-camera>
-      <a-box color="#990000" id="box1" position="-3 1 0" scale="1 1 2" material="" geometry="">  </a-box>
-      <a-box color="#888888" id="box2" position="0 1 0" material="" geometry="" animation__mouseenter="property: position; to: 0 2 0;startEvents: mouseenter" animation__mouseleave="property: position; to: 0 1 0;startEvents: mouseleave">  </a-box>
-      <a-box color="#3333ff" id="box3" position="3 1 0" scale="1 1 2"material="" geometry="">  </a-box> </a-scene><div>`
+  <a-sphere radius="3" id="sun" color="#ffcc33" position="0 0 -10" animation__515="  property: rotation;to: 0 360 0;loop: true;dur: 15000;" material="" geometry="">
+  <a-sphere radius="1" id="earth" color="#87CEEB" position="7 0 0" animation__516="  property: rotation;to: 0 360 0;dur: 5000;loop: true;" material="" geometry="">   <a-sphere id="moon" color="#808080" radius="0.2" position="1.5 0 0" material="" geometry="">
+  </a-sphere></a-sphere></a-sphere></a-entity></a-scene><div>`
   if(div == "instructions"){
     str= nav+ inst;
   }
   else if (div == "final"){
     str = nav + final;
   }
-  const parent = document.getElementById("testDiv3")
+  const parent = document.getElementById("testDiv2")
   parent.innerHTML = str;
   if(div=="final"){
     document.getElementById("btninstructions").classList.remove("active");
@@ -132,12 +138,25 @@ document.getElementById("save").addEventListener("click", ()=>{
 document.getElementById("myfile").addEventListener("change", function (e){
   importBlocksFile(this)
 })
-function importBlocksFile() {
-  const file = document.getElementById("task3");
-  console.log(file)
-  Blockly.Xml.domToWorkspace(workspace, file);
-
+function importBlocksFile(element) {
+  try {	
+    var file = element.files[0];
+    if(file.name.substring(file.name.lastIndexOf('.')+1, file.name.length).toLowerCase() == "xml")
+    {
+      var fr = new FileReader();           
+      fr.onload = function (event) {
+        var xml = Blockly.Xml.textToDom(event.target.result);
+        workspace.clear();
+        Blockly.Xml.domToWorkspace(xml,workspace);
+      };
+      fr.readAsText(file);
+    }
+    else{
+      alert("Wrong file type");
+    }
+  } catch (e) {
+    alert(e);
+  }	 
 }
 
-setDiv3("instructions");
-importBlocksFile();
+setDiv2("instructions")

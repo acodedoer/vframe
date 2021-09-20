@@ -5,7 +5,7 @@ const entitiesBlocks =
 /* Begin Entities*/
   {//entity
     "type": "entity",
-    "message0": "entity %1 component(s) %2 child(ren) %3",
+    "message0": "create entity %1 component(s) %2 child(ren) %3",
     "args0": [
     {
         "type": "input_dummy"
@@ -29,7 +29,7 @@ const entitiesBlocks =
   },
   {//childless entity
   "type": "entity_childless",
-  "message0": "entity %1 component(s) %2",
+  "message0": "create entity %1 component(s) %2",
   "args0": [
   {
       "type": "input_dummy"
