@@ -11,6 +11,22 @@ HtmlGenerator.scrub_ = function(block, code) {
   return code + nextCode;
 };
 
+HtmlGenerator['assets'] = function(block) {
+  const assets = HtmlGenerator.statementToCode(block, 'assets');
+  const code = `<a-assets> ${assets} </a-assets>`;
+  return code;
+};
+
+
+const assets_blocks = ['asset-item']
+for(let i = 0; i<assets_blocks.length; i++){
+HtmlGenerator[assets_blocks[i]] = function(block) {
+  const assets = HtmlGenerator.statementToCode(block, assets_blocks[i]);
+  const code = `<a-${assets_blocks[i]} ${assets}> </a-${assets_blocks[i]}>`;
+  return code;
+};
+}
+
 HtmlGenerator['entity'] = function(block) {
   const components = HtmlGenerator.statementToCode(block, 'components');
   const children = HtmlGenerator.statementToCode(block, 'children');
@@ -51,7 +67,7 @@ for(let i = 0; i<primitive_geometries.length; i++){
   }
 }
 
-const primitive_attributes = ['entity_id','primitiveentity_id','geometry_depth','sound_autoplay','sound_loop','sound_on','sound_volume','geometry_color', 'cursor_far','cursor_fuse','cursor_fuse-timeout','cursor_interval','cursor_objects', 'geometry_width', 'geometry_height', 'geometry_radius', 'text_value', 'text_font', 'light_angle', 'light_color', 'light_type', "camera_wasd-controls-enabled", "camera_reverse-mouse-drag", "camera_look-controls-enabled", "camera_near", "camera_fov", "camera_far"]
+const primitive_attributes = ['asset_id', 'asset_src','entity_id','primitiveentity_id','geometry_depth','sound_autoplay','sound_loop','sound_on','sound_volume','geometry_color', 'cursor_far','cursor_fuse','cursor_fuse-timeout','cursor_interval','cursor_objects', 'geometry_width', 'geometry_height', 'geometry_radius', 'text_value', 'text_font', 'light_angle', 'light_color', 'light_type', "camera_wasd-controls-enabled", "camera_reverse-mouse-drag", "camera_look-controls-enabled", "camera_near", "camera_fov", "camera_far"]
 for(let i = 0; i<primitive_attributes.length; i++){
   HtmlGenerator[primitive_attributes[i]] = function(block) {
     const value = [block.getFieldValue(primitive_attributes[i]), Blockly.JavaScript.ORDER_ATOMIC][0];

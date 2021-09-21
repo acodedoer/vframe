@@ -32,7 +32,7 @@ function myUpdateFunction(event) {
   var workspace_code = HtmlGenerator.workspaceToCode(workspace);
   const scene = document.getElementById('scene')
   scene.innerHTML = workspace_code   
-  document.getElementById('sourceCode').innerText = workspace_code;
+  document.getElementById('sourceCode').innerText = html_beautify(workspace_code);
 }
 workspace.addChangeListener(myUpdateFunction);
 

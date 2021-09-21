@@ -21,6 +21,7 @@
   <nav class="tab">
     <button class="tablinks active" onclick="setCategories(event, 'componentToolbox')">Components</button>
     <button class="tablinks" onclick="setCategories(event, 'primitiveToolbox')">Primitives</button>
+    <button class="tablinks" onclick="setCategories(event, 'assetsToolbox')">Assets</button>
     <!--<button class="tablinks" onclick="setCategories(event, 'scriptsToolbox')">Scripts</button> -->
   </nav>
   <div id="container">
@@ -208,6 +209,14 @@
       </category>
     </xml>
 
+    <xml xmlns="https://developers.google.com/blockly/xml" id="assetsToolbox" style="display: inline">
+      <category name="Assets" colour="#000000">
+        <block type="assets"></block>
+        <block type="asset-item"></block>
+        <block type="asset_id"></block>
+        <block type="asset_src"></block>
+      </category>
+    </xml>
     <xml xmlns="https://developers.google.com/blockly/xml" id="scriptsToolbox" style="display: inline">
       <category name="Camera" colour="#0F3E6C">
         <block type="camera"></block>
@@ -282,6 +291,7 @@
       <script src="primitives_blocks.js"></script>
       <script src="entities_blocks.js"></script>
       <script src="components_blocks.js"></script>
+      <script src="assets_blocks.js"></script>
       <script src="code_generators.js"></script>
     <script src="index.js"></script>
 </body>
