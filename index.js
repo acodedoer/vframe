@@ -29,10 +29,19 @@ function setCategories(e, toolbox){
  }
 
 function myUpdateFunction(event) {
-  var workspace_code = HtmlGenerator.workspaceToCode(workspace);
-  const scene = document.getElementById('scene')
-  scene.innerHTML = workspace_code   
-  document.getElementById('sourceCode').innerText = html_beautify(workspace_code);
+  var workspace_code =  html_beautify(HtmlGenerator.workspaceToCode(workspace));
+  const container = document.createElement('div');
+  container.innerHTML = workspace_code;
+  const assets = container.getElementsByTagName('a-assets');
+  console.log(assets);
+  document.getElementById("scene-assets").innerHTML = "";
+  for(let item of assets){
+    document.getElementById("scene-assets").innerHTML += item.innerHTML;
+    container.removeChild(item);
+  };
+  const scene = document.getElementById('scene');
+  scene.innerHTML = container.innerHTML;
+  document.getElementById('sourceCode').innerText = workspace_code;
 }
 workspace.addChangeListener(myUpdateFunction);
 
