@@ -23,7 +23,7 @@ for(let i = 0; i<assets_blocks.length; i++){
 HtmlGenerator[assets_blocks[i]] = function(block) {
   const assets = HtmlGenerator.statementToCode(block, assets_blocks[i]);
   if(assets_blocks[i]=='asset-item') assets_blocks[i] = 'a-asset-item'
-  const code = `<${assets_blocks[i]} ${assets}> </${assets_blocks[i]}>`;
+  const code = `<${assets_blocks[i]} crossorigin="anonymous" ${assets}> </${assets_blocks[i]}>`;
   return code;
 };
 }
