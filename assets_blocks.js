@@ -33,6 +33,22 @@ const assetsBlocks =
     "tooltip": "",
     "helpUrl": ""
   },
+   {//image asset
+    "type": "img",
+    "message0": "img %1",
+    "args0": [
+    {
+        "type": "input_statement",
+        "name": "img",
+        "check": "asset_property"
+    }
+    ],
+    "previousStatement": "asset",
+    "nextStatement": "asset",
+    "colour": "#000000",
+    "tooltip": "",
+    "helpUrl": ""
+  },
   { //asset id 
     "type": "asset_id",
     "message0": "set asset id to %1",

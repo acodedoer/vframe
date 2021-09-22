@@ -35,10 +35,12 @@ function myUpdateFunction(event) {
   const assets = container.getElementsByTagName('a-assets');
   console.log(assets);
   document.getElementById("scene-assets").innerHTML = "";
+  let asset_html = "";
   for(let item of assets){
-    document.getElementById("scene-assets").innerHTML += item.innerHTML;
+    asset_html+= item.innerHTML;
     container.removeChild(item);
   };
+  document.getElementById("scene-assets").innerHTML = html_beautify(asset_html);
   const scene = document.getElementById('scene');
   scene.innerHTML = container.innerHTML;
   document.getElementById('sourceCode').innerText = workspace_code;
