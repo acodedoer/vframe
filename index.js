@@ -37,7 +37,7 @@ function myUpdateFunction(event) {
   document.getElementById("scene-assets").innerHTML = "";
   let asset_html = "";
   for(let item of assets){
-    asset_html+= item.innerHTML;
+    if(item.innerHTML!= " ") asset_html+= item.innerHTML;
     container.removeChild(item);
   };
   document.getElementById("scene-assets").innerHTML = html_beautify(asset_html);

@@ -17,13 +17,18 @@ HtmlGenerator['assets'] = function(block) {
   return code;
 };
 
+HtmlGenerator['asset-item'] = function(block) {
+  const assets = HtmlGenerator.statementToCode(block, 'asset-item');
+  const code = `<a-asset-item crossorigin="anonymous" ${assets}> </a-asset-item>`;
+  return code;
+};
 
-const assets_blocks = ['asset-item', 'img']
+
+const assets_blocks = ['img', 'audio', 'video']
 for(let i = 0; i<assets_blocks.length; i++){
 HtmlGenerator[assets_blocks[i]] = function(block) {
   const assets = HtmlGenerator.statementToCode(block, assets_blocks[i]);
-  if(assets_blocks[i]=='asset-item') assets_blocks[i] = 'a-asset-item'
-  const code = `<${assets_blocks[i]} crossorigin="anonymous" ${assets}> </${assets_blocks[i]}>`;
+  const code = `\n <${assets_blocks[i]} crossorigin="anonymous" ${assets}> </${assets_blocks[i]}>`;
   return code;
 };
 }

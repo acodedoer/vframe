@@ -49,6 +49,38 @@ const assetsBlocks =
     "tooltip": "",
     "helpUrl": ""
   },
+   {//audio asset
+    "type": "audio",
+    "message0": "audio %1",
+    "args0": [
+    {
+        "type": "input_statement",
+        "name": "audio",
+        "check": "asset_property"
+    }
+    ],
+    "previousStatement": "asset",
+    "nextStatement": "asset",
+    "colour": "#000000",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {//video asset
+   "type": "video",
+   "message0": "video %1",
+   "args0": [
+   {
+       "type": "input_statement",
+       "name": "video",
+       "check": "asset_property"
+   }
+   ],
+   "previousStatement": "asset",
+   "nextStatement": "asset",
+   "colour": "#000000",
+   "tooltip": "",
+   "helpUrl": ""
+ },
   { //asset id 
     "type": "asset_id",
     "message0": "set asset id to %1",
