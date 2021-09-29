@@ -26,7 +26,13 @@ html, body {
     height:calc(100% - 48px);
     overflow: auto;
     font-size: 1.2em;
+    padding-left: 0.5em;
+   
   }
+  .list{
+    margin-bottom: .5em;
+  }
+  
   
   #output{
     width: 100%;

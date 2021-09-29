@@ -35,31 +35,31 @@ function setCategories(e, toolbox){
  let str = "";
   const inst = `<div id = "instructions">Use the Components and Primitive blocks, and the blocks already added in the workspace (to the right) to complete the tasks below. Your completed scene, which will be shown in the pane above, should look like the scene shown on the Final Scene tab.
   <ol>
-  <li>Add an environment to the scene.
+  <li class="list">Add an environment to the scene.
   <ul>
     <li>Set its preset to "Egypt"</li>
     <li>Set its dressing amount to 20</li>
   </ul>
-  <li>Change the y position of all three boxes in the scene to 1</li>
-  <li>Change the colour of the box with id "box2" to "#88888"</li>
-  <li>Change the scale of the boxes with id "box1" and "box3" to (1 1 2)</li>
-  <li>Add a new camera to the scene
+  <li class="list">Change the y position of all three boxes in the scene to 1</li>
+  <li class="list">Change the colour of the box with id "box2" to "#88888"</li>
+  <li class="list">Change the scale of the boxes with id "box1" and "box3" to (1 1 2)</li>
+  <li class="list">Add a new camera to the scene
   <ul>
     <li>Set its position (0 3 5)</li>
   </ul>
   </li>
-  <li>Add a cursor to the scene as a child of the new camera</li>
-  <li>Add an animation component to the box with id "box2"
+  <li class="list">Add a cursor to the scene as a child of the new camera</li>
+  <li class="list">Add an animation component to the box with id "box2"
   <ul>
     <li>Set its start animation event to "mouseenter"</li>
     <li>Set its animation propert to "position"</li>
     <li> Set it to animate to position 2 along the y axis</li>
   </ul>
   </li>
-  <li>Add another animation component to the box with id "box2"
+  <li class="list">Add another animation component to the box with id "box2"
   <ul>
     <li>Set its start animation event to "mouseleave"</li>
-    <li>Set its animation propert to "position""</li>
+    <li>Set its animation property to "position""</li>
     <li> Set it to animate to position 1 along the y axis</li>
   </ul>
   </li>

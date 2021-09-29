@@ -35,25 +35,24 @@ function setCategories(e, toolbox){
  let str = "";
   const inst = `<div id = "instructions">Use the Components and Primitive blocks in the workspace (to the right) to complete the tasks below. Your completed scene, which will be shown in the output pane above, should look like the scene shown on the Final Scene tab.
   <ol>
-  <li>Add a sphere to the scene.
+  <li class="list">Add a sphere to the scene.
   <ul>
     <li>Set its id to “sun”</li>
-    <li>Set its position to (0 0 -10)</li>
+    <li>Set its position to (0 0 -7)</li>
     <li>Set its radius to 3</li>
     <li>Set its color to a bright shade of yellow</li>
   </ul>
   </li>
 
-  <li>Add another sphere to the scene as a child of the sphere with id "sun".
+  <li class="list">Add another sphere to the scene as a child of the sphere with id "sun".
   <ul>
     <li>Set its id to "earth"</li>
     <li>Set its position to (7 0 0)</li>
-    <li>Set its radius to 1</li>
     <li>Set its color to a light shade of blue</li>
   </ul>
   </li>
 
-  <li>Add another sphere to the scene as a child of the sphere with id "earth".
+  <li class="list">Add another sphere to the scene as a child of the sphere with id "earth".
   <ul>
     <li>Set its id to "moon"</li>
     <li>Set its position to (1.5  0 0)</li>
@@ -61,13 +60,15 @@ function setCategories(e, toolbox){
     <li>Set its color to gray</li>
   </ul>
   </li>
-  <li>Add an animation component to the sphere with id “sun”</li>
+
+  <li class="list">Add an animation component to the sphere with id “sun”
   <ul>
     <li>Set up the animation component to raotate the sun 360 degrees about it y axis for a duraion of 15 seconds</li>
     <li>Set the animation loop to "true"</li>
   </ul>
   </li>
-  <li>Add an animation component to the sphere with id “sun”</li>
+
+  <li class="list">Add an animation component to the sphere with id “earth”
   <ul>
   <li>Set up the animation component to raotate the earth 360 degrees about it y axis for a duraion of 5 seconds</li>
   <li>Set the animation loop to "true"</li>

@@ -475,6 +475,21 @@ const primitivesBlocks =
   "tooltip": "",
   "helpUrl": ""
 },
+{//geometry colour
+  "type": "geometrycode_color",
+  "message0": "colour %1",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "geometrycode_color",
+    }
+  ],
+  "colour": "#00567F",
+  "previousStatement": "geometry_attribute",
+  "nextStatement": "geometry_attribute",
+  "tooltip": "",
+  "helpUrl": ""
+},
 {//geometry arc
   "type": "geometry_arc",
   "message0": "arc %1",

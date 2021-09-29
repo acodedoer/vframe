@@ -35,47 +35,40 @@ function setCategories(e, toolbox){
    let str = "";
     const inst = `<div id = "instructions">Use the Components and Primitive blocks in the workspace (to the right) to complete the tasks below. Your completed scene, which will be shown in the output pane above, should look like the scene shown on the Final Scene tab.
     <ol>
-    <li>Add a box to the scene
+    <li class="list">Add a box to the scene
     <ul>
       <li>Set its position to (-1 0.5 0)</li>
       <li>Set its rotation to (0 45 0)</li>
+      <li>Hint: Position and rotation are transformation components.</li>
       <li>Set its colour to #4CC3D9</li>
     </ul>
     </li>
 
-    <li>Add a sphere to the scene
+    <li class="list">Add a sphere to the scene
     <ul>
       <li>Set its position to (0 1.25 -2)</li>
       <li>Set its radius to 1.25</li>
       <li>Set its colour to #EF2D5E</li>
     </ul>
     </li>
-    <li>Add a cylinder to the scene
+    <li class="list">Add a cylinder to the scene
     <ul>
-      <li>Set its position to (0 0.75 0)</li>
+      <li>Set its position to (1 0.75 0)</li>
       <li>Set its radius to 0.5</li>
+      <li>Set its height to 1.5</li>
       <li>Set its colour to #FFC65D</li>
     </ul>
     </li>
-    <li>Add a plane to the scene
+    <li class="list">Add a plane to the scene
     <ul>
-      <li>Set its position to (0 0 -4)</li>
+      <li>Set its position to (0 0 -1)</li>
       <li>Set its rotation to (-90 0 0)</li>
       <li>Set its colour to #7BC8A4</li>
       <li>Set its width to 4</li>
       <li>Set its height to 4</li>
     </ul>
     </li>
-    <li>Add a plane to the scene
-    <ul>
-      <li>Set its position to (0 0 -4)</li>
-      <li>Set its rotation to (-90 0 0)</li>
-      <li>Set its colour to #7BC8A4</li>
-      <li>Set its width to 4</li>
-      <li>Set its height to 4</li>
-    </ul>
-    </li>
-    <li>Add a sky to the scene
+    <li class="list">Add a sky to the scene
     <ul>
       <li>Set its colour to #7BC8A4</li>
     </ul>
