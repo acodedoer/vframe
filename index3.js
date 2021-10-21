@@ -33,7 +33,7 @@ function setCategories(e, toolbox){
   <button id ="btnfinal" class="tablinks_" onclick="setDiv3(event,'final')">Task 3: Final Scene</button>
   </nav>`
  let str = "";
-  const inst = `<div id = "instructions">Use the Components and Primitive blocks, and the blocks already added in the workspace (to the right) to complete the tasks below. Your completed scene, which will be shown in the pane above, should look like the scene shown on the Final Scene tab.
+  const inst = `<div id = "instructions">Use the Components and Primitive blocks, and the blocks already added in the workspace (to the left) to complete the tasks below. Your completed scene, which will be shown in the pane above, should look like the scene shown on the Final Scene tab.
   <ol>
   <li class="list">Add an environment to the scene.
   <ul>
